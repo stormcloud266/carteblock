@@ -1,0 +1,11 @@
+@import '@globalStyles/variables';
+
+.title {
+	font-size: $font-size-6;
+	text-shadow: 1px 1px $color-primary;
+	margin-bottom: 2.4rem;
+}
+
+.center {
+	text-align: center;
+}

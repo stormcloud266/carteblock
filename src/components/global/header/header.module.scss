@@ -1,0 +1,141 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
+.noScroll {
+	overflow: hidden;
+}
+
+.header {
+	background-color: $color-header-background;
+	border-bottom: 2px solid $color-cta;
+
+	// positioning
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+
+	a {
+		margin-left: 4.8rem;
+	}
+}
+
+.logo {
+	padding: 1.2rem 0;
+	position: relative;
+	z-index: 1000;
+}
+
+.toggle {
+	display: none;
+}
+
+@include whenMedium {
+	.toggle {
+		// overwrite default button styles
+		border: 1px solid transparent;
+		border-radius: 4px;
+		padding: 0.5rem;
+		line-height: 1;
+		background-color: transparent;
+		color: $color-text-tertiary;
+
+		// positioning
+		display: block;
+		position: relative;
+		z-index: 1000;
+
+		svg {
+			display: block;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		&:focus {
+			border-color: $color-text-tertiary;
+		}
+	}
+
+	.toggleOpen {
+		color: $color-text-accent;
+		&:focus {
+			border-color: $color-cta;
+		}
+	}
+
+	.nav {
+		background-color: $color-background-dark;
+		visibility: hidden;
+
+		// positioning
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		min-height: 100vh;
+
+		// flex
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		a {
+			font-size: $font-size-3;
+			margin-left: 0;
+			margin-bottom: 2.8rem;
+			opacity: 0;
+			transform: translateY(1rem);
+			padding: 1rem 1.4rem;
+		}
+	}
+
+	.open {
+		visibility: visible;
+		animation: fadeIn 0.3s forwards;
+
+		a {
+			transform: translateY(0);
+			opacity: 1;
+			transition: opacity 0.2s, transform 0.2s;
+			color: $color-text-accent;
+
+			&:hover {
+				color: $color-link;
+			}
+
+			@for $i from 0 through 9 {
+				&:nth-child(#{$i + 1}) {
+					transition: color 0.2s, opacity 0.2s (0.15s + $i * 0.05),
+						transform 0.2s (0.15s + $i * 0.05);
+				}
+			}
+		}
+	}
+} // end of whenMedium
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		border-radius: 200px;
+	}
+	to {
+		opacity: 1;
+		border-radius: 0px;
+	}
+}
