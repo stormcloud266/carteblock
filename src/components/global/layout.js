@@ -2,8 +2,6 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import { Footer, Header, SkipLink } from '@global'
-// import CookieBanner from '@global/cookieBanner'
-
 import '@globalStyles/global.scss'
 
 const Layout = ({ children }) => {
@@ -17,7 +15,6 @@ const Layout = ({ children }) => {
 				{children}
 			</main>
 			<Footer />
-			{/* <CookieBanner /> */}
 		</>
 	)
 }
