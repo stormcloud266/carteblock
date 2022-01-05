@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import classnames from 'classnames'
-import { NavLinks } from '@global'
-import { Hamburger, Times } from '@images/icons'
 import { Container } from '@UI'
 import * as styles from './header.module.scss'
 import Helmet from 'react-helmet'
-import { useCurrentWidth } from '../../../hooks'
 
 const Header = () => {
-	const [isNavOpen, setIsNavOpen] = useState(false)
-
-	const width = useCurrentWidth()
-
-	useEffect(() => {
-		if (width > 900) {
-			setIsNavOpen(false)
-		}
-	}, [width])
+	const [isLightTheme, setIsLightTheme] = useState(true)
 
 	return (
 		<header className={styles.header}>
 			<Helmet
 				bodyAttributes={{
-					class: isNavOpen ? styles.noScroll : null,
+					class: isLightTheme ? 'light' : 'dark',
 				}}
 			/>
 			<Container wrapper className={styles.container}>
@@ -31,17 +20,23 @@ const Header = () => {
 					Logo
 				</Link>
 
-				<button
-					className={classnames(styles.toggle, isNavOpen && styles.toggleOpen)}
-					onClick={() => setIsNavOpen(!isNavOpen)}
-					aria-label={`${isNavOpen ? 'close' : 'open'} menu`}
-				>
-					{isNavOpen ? <Times /> : <Hamburger />}
-				</button>
+				<div>
+					<button
+						className={styles.toggle}
+						onClick={() => setIsLightTheme(false)}
+						aria-label=''
+					>
+						night
+					</button>
 
-				<nav className={classnames(styles.nav, isNavOpen && styles.open)}>
-					<NavLinks />
-				</nav>
+					<button
+						className={styles.toggle}
+						onClick={() => setIsLightTheme(true)}
+						aria-label=''
+					>
+						day
+					</button>
+				</div>
 			</Container>
 		</header>
 	)
