@@ -3,9 +3,12 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './title.module.scss'
 
-const Title = ({ tag, children, center, className, ...rest }) => {
+const Title = ({ tag, children, center, className, size, ...rest }) => {
 	const classes = classnames(
 		styles.title,
+		size && size === 1 && styles.lg,
+		size && size === 2 && styles.md,
+		size && size === 3 && styles.sm,
 		center && styles.center,
 		className && className
 	)
@@ -66,6 +69,7 @@ export default Title
 
 Title.propTypes = {
 	tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']),
+	size: PropTypes.oneOf([1, 2, 3]),
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,

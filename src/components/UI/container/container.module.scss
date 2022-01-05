@@ -3,14 +3,14 @@
 
 // sections
 .section {
-	padding-top: 10rem;
-	padding-bottom: 10rem;
+	padding-top: 15rem;
+	padding-bottom: 15rem;
 }
 .sectionTop {
-	padding-top: 10rem;
+	padding-top: 15rem;
 }
 .sectionBottom {
-	padding-bottom: 10rem;
+	padding-bottom: 15rem;
 }
 
 @include whenMedium {
@@ -108,7 +108,7 @@
 .textBlock {
 	h1,
 	h2 {
-		margin-bottom: 1.8rem;
+		margin-bottom: 7.2rem;
 	}
 	h3,
 	h4,
@@ -128,8 +128,9 @@
 		padding-top: 1.6rem;
 	}
 
-	.button {
-		margin-top: 1rem;
+	button,
+	a {
+		margin-top: 6rem;
 	}
 
 	& > *:last-child {

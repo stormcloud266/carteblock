@@ -1,3 +1,4 @@
-import Hero from './hero/hero'
+import Hero from './1_hero/hero'
+import Intro from './2_intro/intro'
 
-export { Hero }
+export { Hero, Intro }

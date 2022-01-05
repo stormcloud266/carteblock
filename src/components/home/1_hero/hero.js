@@ -8,7 +8,7 @@ const Hero = () => {
 		<Container wrapper section>
 			<Flex>
 				<Container textBlock>
-					<Title>Blockchain Challenges, Unblocked.</Title>
+					<Title tag='h1'>Blockchain Challenges, Unblocked.</Title>
 					<p>
 						We help startups & enterprises leverage decentralized solutions &
 						capitalize on blockchain technology to introduce a new level of
