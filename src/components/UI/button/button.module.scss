@@ -1,17 +1,26 @@
 @import '@globalStyles/variables';
 
 .button {
-	padding: 0.6rem 1.8rem;
+	padding: 1.4rem 3rem;
 	cursor: pointer;
-	color: $color-text-tertiary;
-	font-size: 1.5rem;
-	font-weight: bold;
+	color: #333;
+	font-size: 3rem;
+	font-weight: 500;
 	background-color: white;
-	border: 2px solid $color-cta;
+	border: 2px solid #333;
+	border-radius: 6rem;
 	outline: none;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
 	transition: all 0.2s;
 	box-shadow: 0px 0px hsl(0, 0%, 20%);
+	width: 100%;
+	max-width: 30rem;
+
+	svg {
+		margin-left: 2.4rem;
+	}
 
 	&:hover,
 	&:focus {

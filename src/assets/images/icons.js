@@ -19,21 +19,11 @@ export const Hamburger = () => (
 	</svg>
 )
 
-export const Times = () => (
-	<svg
-		xmlns='http://www.w3.org/2000/svg'
-		className='h-6 w-6'
-		fill='none'
-		viewBox='0 0 24 24'
-		stroke='currentColor'
-		width='24'
-		height='24'
-	>
+export const Arrow = () => (
+	<svg width={22} height={20} fill='none' xmlns='http://www.w3.org/2000/svg'>
 		<path
-			strokeLinecap='round'
-			strokeLinejoin='round'
-			strokeWidth={2}
-			d='M6 18L18 6M6 6l12 12'
+			d='m13.552.2-1.89 1.86 6.12 6.09H.232v2.7h17.55l-6.12 6.09 1.89 1.86 8.88-9.15v-.3L13.552.2Z'
+			fill='#333'
 		/>
 	</svg>
 )
