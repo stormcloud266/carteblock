@@ -17,7 +17,10 @@ const Hero = () => {
 					<Button>Say Hello</Button>
 				</Container>
 				<div>
-					<StaticImage src='../../../assets/images/PIXEL/CB-ILL-O1.png' />
+					<StaticImage
+						src='../../../assets/images/PIXEL/CB-ILL-O1.png'
+						alt=''
+					/>
 				</div>
 			</Flex>
 		</Container>

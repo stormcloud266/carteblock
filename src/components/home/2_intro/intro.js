@@ -8,7 +8,10 @@ const Intro = () => {
 		<Container wrapper section>
 			<Flex>
 				<div>
-					<StaticImage src='../../../assets/images/PIXEL/CB-ILL-O2.png' />
+					<StaticImage
+						src='../../../assets/images/PIXEL/CB-ILL-O2.png'
+						alt=''
+					/>
 				</div>
 				<Container textBlock>
 					<Title size={2}>

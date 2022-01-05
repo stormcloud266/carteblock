@@ -1,0 +1,15 @@
+.container {
+	padding-right: 9.8rem;
+
+	&:last-of-type {
+		padding-right: 0;
+	}
+}
+
+.label {
+	color: #ccc;
+}
+
+.description {
+	margin-top: 6rem;
+}
