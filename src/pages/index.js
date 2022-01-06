@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, Seo } from '@global'
-import { Hero, Intro, Benefits, Quote, Portfolio } from '@home'
+import { Hero, Intro, Benefits, Quote, Portfolio, Cta } from '@home'
 
 const IndexPage = () => (
 	<Layout>
@@ -8,7 +8,9 @@ const IndexPage = () => (
 		<Hero />
 		<Intro />
 		<Benefits />
+		<Quote />
 		<Portfolio />
+		<Cta />
 	</Layout>
 )
 
