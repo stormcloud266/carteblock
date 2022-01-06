@@ -34,7 +34,9 @@ const Footer = () => {
 
 					<nav className={styles.nav}>
 						{data.map(({ text, link }) => (
-							<a href={link}>{text}</a>
+							<a href={link} key={text}>
+								{text}
+							</a>
 						))}
 					</nav>
 				</div>
