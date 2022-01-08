@@ -1,4 +1,5 @@
 @import '@globalStyles/variables';
+@import '@globalStyles/mixins';
 
 .row {
 	display: flex;
@@ -22,11 +23,11 @@
 .nav a {
 	color: hsla(0, 0%, 20%, 1);
 	margin-left: 3rem;
-	font-size: 2.4rem;
+	font-size: $font-size-24;
 }
 
 .smallText {
-	font-size: 1.8rem;
+	font-size: $font-size-18;
 	color: hsla(0, 0%, 60%, 1);
 }
 
@@ -37,5 +38,15 @@
 
 	.logo {
 		color: white;
+	}
+}
+
+@include whenMedium {
+	.nav a {
+		font-size: $font-size-20;
+	}
+
+	.smallText {
+		font-size: $font-size-16;
 	}
 }

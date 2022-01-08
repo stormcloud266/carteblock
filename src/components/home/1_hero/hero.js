@@ -6,8 +6,8 @@ import * as styles from './hero.module.scss'
 const Hero = () => {
 	return (
 		<Container wrapper section>
-			<Flex>
-				<Container textBlock>
+			<Flex noHorizontalMargin>
+				<Container textBlock className={styles.textContainer}>
 					<Title tag='h1'>Blockchain Challenges, Unblocked.</Title>
 					<p>
 						We help startups & enterprises leverage decentralized solutions &

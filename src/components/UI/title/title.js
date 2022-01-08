@@ -6,7 +6,6 @@ import * as styles from './title.module.scss'
 const Title = ({ tag, children, center, className, size, ...rest }) => {
 	const classes = classnames(
 		styles.title,
-		size && size === 1 && styles.lg,
 		size && size === 2 && styles.md,
 		size && size === 3 && styles.sm,
 		center && styles.center,

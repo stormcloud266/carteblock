@@ -32,10 +32,20 @@ $font-size-5: 3.3rem;
 $font-size-6: 4rem;
 $font-size-7: 4.8rem;
 
+$font-size-16: 1.6rem;
+$font-size-18: 1.8rem;
+$font-size-20: 2rem;
+$font-size-24: 2.4rem;
+$font-size-30: 3rem;
+$font-size-36: 3.6rem;
+$font-size-48: 4.8rem;
+$font-size-60: 6rem;
+
 ///////////////// sizes /////////////////
 $breakpoint-xsmall: 25em; // 400px
 $breakpoint-small: 37.5em; // 600px
-$breakpoint-medium: 56.25em; // 900px
+$breakpoint-medium: 67.5em; // 1080
+$breakpoint-large: 84.375em; // 1200px
 $wrapper-width: 144rem;
 $wrapper-small-width: 60rem;
 $flex-column-gap: 2rem;

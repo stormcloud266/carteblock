@@ -131,7 +131,7 @@ const Services = () => {
 							onClick={() => setActive(index)}
 							className={styles.button}
 						>
-							<Title>{title}</Title>
+							<Title className={styles.title}>{title}</Title>
 						</motion.button>
 					))}
 				</div>
@@ -154,9 +154,9 @@ const Services = () => {
 					initial={'initial'}
 					animate={'animate'}
 					key={data[active].excerpt}
-					className={styles.excerpt}
+					className={styles.excerptContainer}
 				>
-					<Title tag='p' size={3}>
+					<Title tag='p' size={3} className={styles.excerpt}>
 						{data[active].excerpt}
 					</Title>
 				</motion.div>

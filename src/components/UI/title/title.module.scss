@@ -1,7 +1,8 @@
 @import '@globalStyles/variables';
+@import '@globalStyles/mixins';
 
 .title {
-	font-size: 6rem;
+	font-size: $font-size-60;
 	font-family: $font-family-title;
 }
 
@@ -9,14 +10,38 @@
 	text-align: center;
 }
 
-.lg {
-	font-size: 6rem;
-}
-
 .md {
-	font-size: 4.8rem;
+	font-size: $font-size-48;
 }
 
 .sm {
-	font-size: 3.6rem;
+	font-size: $font-size-36;
+}
+
+@include whenLarge {
+	.title {
+		font-size: $font-size-48;
+	}
+
+	.md {
+		font-size: $font-size-36;
+	}
+
+	.sm {
+		font-size: $font-size-24;
+	}
+}
+
+@include whenMedium {
+	.title {
+		font-size: $font-size-36;
+	}
+
+	.md {
+		font-size: $font-size-30;
+	}
+
+	.sm {
+		font-size: $font-size-24;
+	}
 }
