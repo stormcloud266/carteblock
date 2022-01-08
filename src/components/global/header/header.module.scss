@@ -2,9 +2,10 @@
 @import '@globalStyles/mixins';
 
 .header {
-	background-color: $color-header-background;
-	border-bottom: 2px solid $color-cta;
-
+	background-color: $color-background;
+	// background-color: cadetblue;
+	padding: 1.8rem 0;
+	margin-top: 6.6rem;
 	// positioning
 	position: sticky;
 	top: 0;
@@ -17,10 +18,38 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	max-width: 168rem;
 }
 
 .logo {
-	padding: 1.2rem 0;
 	position: relative;
 	z-index: 1000;
+	color: black;
+
+	svg {
+		display: block;
+	}
+}
+
+.toggle,
+.clock {
+	font-size: $font-size-18;
+	color: #ccc;
+	font-weight: 500;
+}
+
+.toggle {
+	background-color: transparent;
+	text-transform: uppercase;
+	margin-left: 1.6rem;
+}
+
+:global(body.dark) {
+	.header {
+		background-color: $color-background-dark;
+	}
+
+	.logo {
+		color: white;
+	}
 }
