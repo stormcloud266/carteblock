@@ -28,7 +28,11 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<Container wrapper section>
 				<div className={styles.row}>
-					<Link to='/' aria-label='return to top of the page'>
+					<Link
+						to='/'
+						aria-label='return to top of the page'
+						className={styles.logo}
+					>
 						<Logo />
 					</Link>
 

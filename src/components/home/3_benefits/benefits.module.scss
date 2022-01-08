@@ -13,3 +13,9 @@
 .description {
 	margin-top: 6rem;
 }
+
+:global(body.dark) {
+	.label {
+		color: #666;
+	}
+}

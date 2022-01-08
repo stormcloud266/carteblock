@@ -6,7 +6,7 @@ import * as styles from './header.module.scss'
 import Helmet from 'react-helmet'
 
 const Header = () => {
-	const [isLightTheme, setIsLightTheme] = useState(true)
+	const [isLightTheme, setIsLightTheme] = useState(false)
 
 	return (
 		<header className={styles.header}>

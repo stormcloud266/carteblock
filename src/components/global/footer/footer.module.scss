@@ -9,21 +9,33 @@
 	}
 }
 
+.logo {
+	color: black;
+}
+
 .nav,
 .smallText {
 	font-family: $font-family-title;
 	font-weight: 500;
 }
 
-.nav {
-	a {
-		color: hsla(0, 0%, 20%, 1);
-		margin-left: 3rem;
-		font-size: 2.4rem;
-	}
+.nav a {
+	color: hsla(0, 0%, 20%, 1);
+	margin-left: 3rem;
+	font-size: 2.4rem;
 }
 
 .smallText {
 	font-size: 1.8rem;
 	color: hsla(0, 0%, 60%, 1);
+}
+
+:global(body.dark) {
+	.nav a {
+		color: $color-text-accent;
+	}
+
+	.logo {
+		color: white;
+	}
 }
