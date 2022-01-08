@@ -22,7 +22,7 @@ const Benefits = () => {
 	]
 
 	return (
-		<Container section wrapper>
+		<Container section wrapper isSection>
 			<Flex alignStart>
 				{data.map(({ title, description }, index) => (
 					<div key={title} className={styles.container}>

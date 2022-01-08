@@ -5,7 +5,7 @@ import * as styles from './hero.module.scss'
 
 const Hero = () => {
 	return (
-		<Container wrapper section>
+		<Container wrapper section isSection>
 			<Flex noHorizontalMargin>
 				<Container textBlock className={styles.textContainer}>
 					<Title tag='h1'>Blockchain Challenges, Unblocked.</Title>
@@ -14,7 +14,7 @@ const Hero = () => {
 						capitalize on blockchain technology to introduce a new level of
 						transparency, efficiency & automation into their business processes.
 					</p>
-					<Button>Say Hello</Button>
+					<Button href='mailto:info@carteblock.com'>Say Hello</Button>
 				</Container>
 				<div>
 					<StaticImage

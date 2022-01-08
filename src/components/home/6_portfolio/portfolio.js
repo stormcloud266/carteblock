@@ -6,8 +6,8 @@ import {
 	Bluebox,
 	Omnys,
 	Tinyman,
-	Unify,
-	Penfabric,
+	Unifty,
+	Openfabric,
 	Rif,
 	XpNetwork,
 	Tokemak,
@@ -19,15 +19,15 @@ const Portfolio = () => {
 	const data = [
 		{
 			logo: <Algorand />,
-			link: '',
+			link: 'https://algorand.foundation/',
 		},
 		{
 			logo: <Opulous />,
-			link: '',
+			link: 'https://opulous.org/',
 		},
 		{
 			logo: <Bluebox />,
-			link: '',
+			link: 'https://bluebox.info/',
 		},
 		{
 			logo: <Omnys />,
@@ -35,43 +35,49 @@ const Portfolio = () => {
 		},
 		{
 			logo: <Tinyman />,
-			link: '',
+			link: 'https://tinyman.org/',
 		},
 		{
-			logo: <Unify />,
-			link: '',
+			logo: <Unifty />,
+			link: 'https://www.unifty.com/',
 		},
 		{
-			logo: <Penfabric />,
-			link: '',
+			logo: <Openfabric />,
+			link: 'https://openfabric.ai/',
 		},
 		{
 			logo: <Rif />,
-			link: '',
+			link: 'https://www.rifos.org/',
 		},
 		{
 			logo: <XpNetwork />,
-			link: '',
+			link: 'https://xp.network/',
 		},
 		{
 			logo: <Tokemak />,
-			link: '',
+			link: 'https://www.tokemak.xyz/',
 		},
 		{
 			logo: <InvestDao />,
-			link: '',
+			link: 'https://investdao.io/',
 		},
 	]
 
 	return (
-		<Container wrapper section>
+		<Container wrapper section isSection>
 			<Title tag='h2' className={styles.title}>
 				Portfolio
 			</Title>
 			<div className={styles.logosContainer}>
 				{data.map(({ logo, link }, index) =>
 					link ? (
-						<a className={styles.logo} key={index} href={link}>
+						<a
+							href={link}
+							className={styles.logo}
+							key={index}
+							target='_blank'
+							rel='noreferrer'
+						>
 							{logo}
 						</a>
 					) : (

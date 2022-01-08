@@ -5,7 +5,7 @@ import * as styles from './intro.module.scss'
 
 const Intro = () => {
 	return (
-		<Container wrapper section>
+		<Container wrapper section isSection>
 			<Flex noHorizontalMargin>
 				<div>
 					<StaticImage
@@ -23,7 +23,9 @@ const Intro = () => {
 						capitalize on blockchain technology to introduce a new level of
 						transparency, efficiency & automation into their business processes.
 					</p>
-					<Button>Our Services</Button>
+					<Button href='#services' noBlank>
+						Our Services
+					</Button>
 				</Container>
 			</Flex>
 		</Container>

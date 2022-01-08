@@ -38,7 +38,7 @@ const Footer = () => {
 
 					<nav className={styles.nav}>
 						{data.map(({ text, link }) => (
-							<a href={link} key={text}>
+							<a href={link} key={text} target='_blank' rel='noreferrer'>
 								{text}
 							</a>
 						))}

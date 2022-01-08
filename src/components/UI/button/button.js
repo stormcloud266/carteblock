@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import { Arrow } from '@images/icons'
 import * as styles from './button.module.scss'
 
-const Button = ({ href, to, cta, children, className, ...rest }) => {
+const Button = ({ href, to, cta, children, className, noBlank, ...rest }) => {
 	const classes = classnames(
 		cta && styles.cta,
 		styles.button,
@@ -17,8 +17,8 @@ const Button = ({ href, to, cta, children, className, ...rest }) => {
 			<a
 				href={href}
 				className={classes}
-				target='_blank'
-				rel='noreferrer'
+				target={noBlank ? null : '_blank'}
+				rel={noBlank ? null : 'noreferrer'}
 				{...rest}
 			>
 				{children} <Arrow />

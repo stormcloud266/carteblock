@@ -57,10 +57,6 @@ a {
 	text-decoration: none;
 	color: $color-link;
 	transition: color 0.2s;
-	&:hover,
-	&:focus {
-		color: lighten($color-link, 10%);
-	}
 }
 
 button,

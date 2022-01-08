@@ -5,7 +5,7 @@ import * as styles from './quote.module.scss'
 
 const Quote = () => {
 	return (
-		<Container wrapper section>
+		<Container wrapper section isSection>
 			<Flex>
 				<div className={styles.imageContainer}>
 					<StaticImage
