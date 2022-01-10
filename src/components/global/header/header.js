@@ -13,7 +13,6 @@ const Header = ({ toggleTheme, theme }) => {
 		return initialValue || false
 	})
 	const [time, setTime] = useState()
-
 	const { isLightTheme, setIsLightTheme } = useContext(ThemeContext)
 
 	const getTime = () => {
@@ -39,23 +38,23 @@ const Header = ({ toggleTheme, theme }) => {
 	useEffect(() => {
 		if (!hasToggledTheme) {
 			const hours = parseInt(getTime().substring(0, 2))
-			if (hours < 1) {
+			if (hours >= 6 && hours < 18) {
 				toggleTheme('light')
-				setIsLightTheme(true)
 			} else {
 				toggleTheme('dark')
-				setIsLightTheme(false)
 			}
 		} else {
 			localStorage.setItem('hasToggledTheme', JSON.stringify(true))
-			setIsLightTheme(theme === 'light' ? true : false)
 		}
 	}, [hasToggledTheme])
+
+	useEffect(() => {
+		setIsLightTheme(theme === 'light' ? true : false)
+	}, [theme])
 
 	const handleThemeToggle = (theme) => {
 		toggleTheme(theme)
 		setHasToggledTheme(true)
-		setIsLightTheme(theme === 'light' ? true : false)
 	}
 
 	return (
