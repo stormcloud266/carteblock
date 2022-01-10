@@ -31,22 +31,26 @@ const Header = () => {
 	}, [])
 
 	return (
-		<header className={styles.header}>
-			<Helmet
-				bodyAttributes={{
-					class: isLightTheme ? 'light' : 'dark',
-				}}
-			/>
-			<Container wrapper className={styles.container}>
-				<Link to='/' className={styles.logo}>
-					<Logo />
-				</Link>
+		<>
+			<header className={styles.header}>
+				<Helmet
+					bodyAttributes={{
+						class: isLightTheme ? 'light' : 'dark',
+					}}
+				/>
+				<Container wrapper className={styles.container}>
+					<Link to='/' className={styles.logo}>
+						<Logo />
+					</Link>
 
-				<div className={styles.clockContainer}>
-					<time className={styles.clock}>{time} SNG</time>
-				</div>
+					<div className={styles.clockContainer}>
+						<time className={styles.clock}>{time} SNG</time>
+					</div>
+				</Container>
+			</header>
 
-				<div>
+			<Container wrapper className={styles.togglesWrapper}>
+				<div className={styles.togglesPosition}>
 					<button
 						className={styles.toggle}
 						onClick={() => setIsLightTheme(true)}
@@ -64,7 +68,7 @@ const Header = () => {
 					</button>
 				</div>
 			</Container>
-		</header>
+		</>
 	)
 }
 

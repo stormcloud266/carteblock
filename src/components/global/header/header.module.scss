@@ -3,9 +3,9 @@
 
 .header {
 	background-color: $color-background;
-	// background-color: cadetblue;
 	padding: 1.8rem 0;
 	margin-top: 6.6rem;
+
 	// positioning
 	position: sticky;
 	top: 0;
@@ -14,11 +14,29 @@
 	width: 100%;
 }
 
-.container {
+.container,
+.togglesWrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	max-width: 168rem;
+}
+
+.container {
+	padding-right: 16rem;
+}
+
+.togglesWrapper {
+	justify-content: flex-end;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+
+.togglesPosition {
+	position: absolute;
+	bottom: calc(100% + 1.8rem);
 }
 
 .logo {
