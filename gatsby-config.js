@@ -38,6 +38,7 @@ module.exports = {
 					'@home': path.resolve(__dirname, 'src/components/home'),
 					'@images': path.resolve(__dirname, 'src/assets/images'),
 					'@globalStyles': path.resolve(__dirname, 'src/assets/globalStyles'),
+					'@context': path.resolve(__dirname, 'src/context'),
 				},
 			},
 		},

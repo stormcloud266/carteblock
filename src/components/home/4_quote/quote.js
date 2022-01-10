@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Container, Flex, Title } from '@UI'
+import { ThemeContext } from '@context/ThemeContext'
 import * as styles from './quote.module.scss'
 
 const Quote = () => {
+	const { isLightTheme } = useContext(ThemeContext)
+
 	return (
 		<Container wrapper section isSection>
 			<Flex>
 				<div className={styles.imageContainer}>
-					<StaticImage
-						src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
-						alt=''
-					/>
+					{isLightTheme ? (
+						<StaticImage
+							src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
+							alt=''
+						/>
+					) : (
+						<StaticImage
+							src='../../../assets/images/PIXEL/CB-CHROME-BG-DARK.png'
+							alt=''
+						/>
+					)}
 				</div>
 				<Container textBlock>
 					<Title tag='h2' size={3} className={styles.title}>

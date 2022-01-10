@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
 import { Container } from '@UI'
 import { Logo } from '@images/icons'
 import * as styles from './header.module.scss'
+import { ThemeContext } from '@context/ThemeContext'
 
-const Header = ({ toggleTheme }) => {
+const Header = ({ toggleTheme, theme }) => {
 	const [hasToggledTheme, setHasToggledTheme] = useState(() => {
 		const saved = localStorage.getItem('hasToggledTheme')
 		const initialValue = JSON.parse(saved)
-		console.log('saved: ', initialValue)
 		return initialValue || false
 	})
 	const [time, setTime] = useState()
+
+	const { isLightTheme, setIsLightTheme } = useContext(ThemeContext)
 
 	const getTime = () => {
 		const newTime = new Date().toLocaleString('en-GB', {
@@ -38,17 +41,21 @@ const Header = ({ toggleTheme }) => {
 			const hours = parseInt(getTime().substring(0, 2))
 			if (hours < 1) {
 				toggleTheme('light')
+				setIsLightTheme(true)
 			} else {
 				toggleTheme('dark')
+				setIsLightTheme(false)
 			}
 		} else {
 			localStorage.setItem('hasToggledTheme', JSON.stringify(true))
+			setIsLightTheme(theme === 'light' ? true : false)
 		}
 	}, [hasToggledTheme])
 
 	const handleThemeToggle = (theme) => {
 		toggleTheme(theme)
 		setHasToggledTheme(true)
+		setIsLightTheme(theme === 'light' ? true : false)
 	}
 
 	return (
@@ -67,21 +74,31 @@ const Header = ({ toggleTheme }) => {
 
 			<Container wrapper className={styles.togglesWrapper}>
 				<div className={styles.togglesPosition}>
-					<button
+					<motion.button
+						animate={{
+							borderColor: isLightTheme ? '#ccc' : 'transparent',
+							color: isLightTheme ? '#ccc' : '#666',
+						}}
+						transition={{ duration: 0.2 }}
 						className={styles.toggle}
 						onClick={() => handleThemeToggle('light')}
 						aria-label='use light theme.'
 					>
 						day
-					</button>
+					</motion.button>
 
-					<button
+					<motion.button
+						animate={{
+							borderColor: !isLightTheme ? '#ccc' : 'transparent',
+							color: !isLightTheme ? '#ccc' : '#666',
+						}}
+						transition={{ duration: 0.2 }}
 						className={styles.toggle}
 						onClick={() => handleThemeToggle('dark')}
 						aria-label='use dark theme.'
 					>
 						night
-					</button>
+					</motion.button>
 				</div>
 			</Container>
 		</>

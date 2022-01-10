@@ -60,6 +60,9 @@
 	background-color: transparent;
 	text-transform: uppercase;
 	margin-left: 1.6rem;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.3s;
+	line-height: 1.2;
 }
 
 :global(body.dark) {

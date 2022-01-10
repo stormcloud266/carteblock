@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { motion } from 'framer-motion'
+import { ThemeContext } from '@context/ThemeContext'
 import { Container, Flex, Title } from '@UI'
 import * as styles from './services.module.scss'
 
@@ -17,6 +18,7 @@ const variants = {
 
 const Services = () => {
 	const [active, setActive] = useState(0)
+	const { isLightTheme, setIsLightTheme } = useContext(ThemeContext)
 
 	const data = [
 		{
@@ -29,9 +31,15 @@ const Services = () => {
 				'Introductions to Smart Contract auditors',
 				'Introduction to Industry partners from: NFT, DeFi platforms, Influencers etc...',
 			],
-			image: (
+			lightImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-A_LIGHT.png'
+					alt=''
+				/>
+			),
+			darkImage: (
+				<StaticImage
+					src='../../../assets/images/PIXEL/DARK/CB-ILLO-A_DARK.png'
 					alt=''
 				/>
 			),
@@ -53,9 +61,15 @@ const Services = () => {
 				'Intros & negotiations with market makers & liquidity providers',
 				'Access to launch protection programs & other auxiliary services',
 			],
-			image: (
+			lightImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-B_LIGHT.png'
+					alt=''
+				/>
+			),
+			darkImage: (
+				<StaticImage
+					src='../../../assets/images/PIXEL/DARK/CB-ILLO-B_DARK.png'
 					alt=''
 				/>
 			),
@@ -74,9 +88,15 @@ const Services = () => {
 				'Remote blockchain-specialized banking set-up',
 				'Market Makers',
 			],
-			image: (
+			lightImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-C_LIGHT.png'
+					alt=''
+				/>
+			),
+			darkImage: (
+				<StaticImage
+					src='../../../assets/images/PIXEL/DARK/CB-ILLO-C_DARK.png'
 					alt=''
 				/>
 			),
@@ -90,9 +110,15 @@ const Services = () => {
 				'Best practices & documentation for KYC/AML Policies & Procedures, T&Cs etc...',
 				'Access to third-party KYC providers',
 			],
-			image: (
+			lightImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-D_LIGHT.png'
+					alt=''
+				/>
+			),
+			darkImage: (
+				<StaticImage
+					src='../../../assets/images/PIXEL/DARK/CB-ILLO-D_DARK.png'
 					alt=''
 				/>
 			),
@@ -111,9 +137,15 @@ const Services = () => {
 				'Financial reports & presentations',
 				'Tax submissions & liaisons with tax authorities',
 			],
-			image: (
+			lightImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-E_LIGHT.png'
+					alt=''
+				/>
+			),
+			darkImage: (
+				<StaticImage
+					src='../../../assets/images/PIXEL/DARK/CB-ILLO-E_DARK.png'
 					alt=''
 				/>
 			),
@@ -126,7 +158,15 @@ const Services = () => {
 				<div className={styles.buttonsContainer}>
 					{data.map(({ title }, index) => (
 						<motion.button
-							animate={{ color: active === index ? '#000' : '#ccc' }}
+							animate={{
+								color: isLightTheme
+									? active === index
+										? '#000'
+										: '#ccc'
+									: active === index
+									? '#eee'
+									: '#333',
+							}}
 							key={title}
 							onClick={() => setActive(index)}
 							className={styles.button}
@@ -143,7 +183,7 @@ const Services = () => {
 						animate={'animate'}
 						key={active}
 					>
-						{data[active].image}
+						{isLightTheme ? data[active].lightImage : data[active].darkImage}
 					</motion.div>
 				</div>
 			</Flex>
