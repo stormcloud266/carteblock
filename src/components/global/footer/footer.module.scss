@@ -24,6 +24,10 @@
 	color: hsla(0, 0%, 20%, 1);
 	margin-left: 3rem;
 	font-size: $font-size-24;
+
+	&:hover {
+		color: #ccc;
+	}
 }
 
 .smallText {
@@ -34,6 +38,9 @@
 :global(body.dark) {
 	.nav a {
 		color: $color-text-accent;
+		&:hover {
+			color: #666;
+		}
 	}
 
 	.logo {

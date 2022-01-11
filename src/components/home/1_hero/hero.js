@@ -20,6 +20,8 @@ const Hero = () => {
 					<StaticImage
 						src='../../../assets/images/PIXEL/CB-ILL-O1.png'
 						alt=''
+						placeholder='blurred'
+						loading='eager'
 					/>
 				</div>
 			</Flex>

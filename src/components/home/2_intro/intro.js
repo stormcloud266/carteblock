@@ -11,6 +11,7 @@ const Intro = () => {
 					<StaticImage
 						src='../../../assets/images/PIXEL/CB-ILL-O2.png'
 						alt=''
+						placeholder='blurred'
 					/>
 				</div>
 				<Container textBlock>

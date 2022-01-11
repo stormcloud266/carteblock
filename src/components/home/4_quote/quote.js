@@ -15,11 +15,13 @@ const Quote = () => {
 						<StaticImage
 							src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
 							alt=''
+							placeholder='blurred'
 						/>
 					) : (
 						<StaticImage
 							src='../../../assets/images/PIXEL/CB-CHROME-BG-DARK.png'
 							alt=''
+							placeholder='blurred'
 						/>
 					)}
 				</div>

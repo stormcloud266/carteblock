@@ -35,12 +35,14 @@ const Services = () => {
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-A_LIGHT.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 			darkImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/DARK/CB-ILLO-A_DARK.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 		},
@@ -65,12 +67,14 @@ const Services = () => {
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-B_LIGHT.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 			darkImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/DARK/CB-ILLO-B_DARK.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 		},
@@ -92,12 +96,14 @@ const Services = () => {
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-C_LIGHT.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 			darkImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/DARK/CB-ILLO-C_DARK.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 		},
@@ -114,12 +120,14 @@ const Services = () => {
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-D_LIGHT.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 			darkImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/DARK/CB-ILLO-D_DARK.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 		},
@@ -141,12 +149,14 @@ const Services = () => {
 				<StaticImage
 					src='../../../assets/images/PIXEL/LIGHT/CB-ILLO-E_LIGHT.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 			darkImage: (
 				<StaticImage
 					src='../../../assets/images/PIXEL/DARK/CB-ILLO-E_DARK.png'
 					alt=''
+					placeholder='blurred'
 				/>
 			),
 		},
