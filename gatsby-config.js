@@ -3,8 +3,8 @@ const path = require('path')
 module.exports = {
 	siteMetadata: {
 		title: 'Carteblock',
-		siteUrl: `https://www.carteblock.com`,
-		description: `carteblock`,
+		siteUrl: `https://carteblock.com`,
+		description: `CarteBlock is a tech-focused management consultancy that is specialized in helping blockchain start-ups and companies scale and adapt to meet the challenges of the ever-changing markets.`,
 	},
 	plugins: [
 		'gatsby-plugin-sass',
