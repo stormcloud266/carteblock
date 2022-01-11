@@ -8,11 +8,11 @@ const Footer = () => {
 	const data = [
 		{
 			text: 'Email',
-			link: '',
+			link: 'mailto:info@carteblock.com',
 		},
 		{
 			text: 'LinkedIn',
-			link: '',
+			link: 'https://www.linkedin.com/company/carteblock/',
 		},
 		{
 			text: 'Telegram',
@@ -20,7 +20,7 @@ const Footer = () => {
 		},
 		{
 			text: 'Twitter',
-			link: '',
+			link: 'https://twitter.com/CarteBlockPR/media',
 		},
 	]
 
