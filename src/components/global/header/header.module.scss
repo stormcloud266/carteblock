@@ -43,6 +43,8 @@
 	position: relative;
 	z-index: 1000;
 	color: black;
+	width: 100%;
+	max-width: 18rem;
 
 	svg {
 		display: block;
@@ -72,5 +74,19 @@
 
 	.logo {
 		color: white;
+	}
+}
+
+@include whenMedium {
+	.toggle,
+	.clock {
+		font-size: $font-size-16;
+	}
+	.container {
+		padding-right: 14rem;
+	}
+
+	.logo {
+		max-width: 14rem;
 	}
 }

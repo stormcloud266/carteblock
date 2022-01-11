@@ -1,3 +1,6 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
 .title {
 	margin-bottom: 20rem;
 }
@@ -13,4 +16,7 @@
 
 .logo {
 	margin: 0 2rem 6rem;
+}
+
+@include whenLarge {
 }
