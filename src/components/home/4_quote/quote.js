@@ -8,8 +8,8 @@ const Quote = () => {
 	const { isLightTheme } = useContext(ThemeContext)
 
 	return (
-		<Container wrapper section isSection>
-			<Flex>
+		<Container wrapper isSection className={styles.container}>
+			<Flex noHorizontalMargin>
 				<div className={styles.imageContainer}>
 					{isLightTheme ? (
 						<StaticImage
@@ -35,8 +35,13 @@ const Quote = () => {
 						and venture capital industries, we focus on developing synergetic
 						long-term partnerships”
 					</p>
-					<p>- Miles Carroll</p>
-					<p>CEO, Carteblock</p>
+					<div className={styles.author}>
+						<p>-</p>
+						<div>
+							<p>Miles Carroll</p>
+							<p>CEO, Carteblock</p>
+						</div>
+					</div>
 				</Container>
 			</Flex>
 		</Container>

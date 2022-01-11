@@ -5,7 +5,7 @@ import * as styles from './intro.module.scss'
 
 const Intro = () => {
 	return (
-		<Container wrapper section isSection>
+		<Container wrapper isSection className={styles.container}>
 			<Flex noHorizontalMargin>
 				<div>
 					<StaticImage

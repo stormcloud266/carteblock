@@ -1,6 +1,10 @@
 @import '@globalStyles/variables';
 @import '@globalStyles/mixins';
 
+.container {
+	padding-top: 18rem;
+}
+
 .imagesContainer {
 	position: relative;
 	max-width: 60rem;
@@ -20,10 +24,19 @@
 .button {
 	background-color: transparent;
 	text-align: left;
+	margin-bottom: 6rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .excerptContainer {
 	padding-right: 4rem;
+}
+
+.title {
+	line-height: 1;
 }
 
 .list {

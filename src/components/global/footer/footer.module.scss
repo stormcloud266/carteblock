@@ -1,6 +1,11 @@
 @import '@globalStyles/variables';
 @import '@globalStyles/mixins';
 
+.footer {
+	padding-top: 30rem;
+	padding-bottom: 12rem;
+}
+
 .row {
 	display: flex;
 	justify-content: space-between;
@@ -12,6 +17,8 @@
 
 .logo {
 	color: black;
+	width: 100%;
+	max-width: 18rem;
 }
 
 .nav,

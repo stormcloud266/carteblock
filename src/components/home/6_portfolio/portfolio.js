@@ -64,7 +64,7 @@ const Portfolio = () => {
 	]
 
 	return (
-		<Container wrapper section isSection>
+		<Container wrapper isSection className={styles.container}>
 			<Title tag='h2' className={styles.title}>
 				Portfolio
 			</Title>

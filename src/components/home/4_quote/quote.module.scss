@@ -1,8 +1,26 @@
+.container {
+	padding-top: 36rem;
+	padding-bottom: 18rem;
+}
+
 .imageContainer {
 	max-width: 66rem;
 	padding-right: 6rem;
 }
 
 .title {
-	transform: translateX(-11.8rem);
+	transform: translateX(-9.8rem);
+}
+
+.author {
+	margin-top: 6rem;
+	display: flex;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	div {
+		margin-left: 1.6rem;
+	}
 }

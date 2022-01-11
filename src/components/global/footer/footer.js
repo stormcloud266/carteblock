@@ -26,7 +26,7 @@ const Footer = () => {
 
 	return (
 		<footer className={styles.footer}>
-			<Container wrapper section>
+			<Container wrapper>
 				<div className={styles.row}>
 					<Link
 						to='/'

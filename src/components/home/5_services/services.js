@@ -163,8 +163,8 @@ const Services = () => {
 	]
 
 	return (
-		<Container wrapper section isSection>
-			<Flex className={styles.marginBottom} id='services'>
+		<Container wrapper isSection className={styles.container} id='services'>
+			<Flex className={styles.marginBottom}>
 				<div className={styles.buttonsContainer}>
 					{data.map(({ title }, index) => (
 						<motion.button

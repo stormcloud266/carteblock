@@ -3,14 +3,14 @@
 
 // sections
 .section {
-	padding-top: 15rem;
-	padding-bottom: 15rem;
+	padding-top: 18rem;
+	padding-bottom: 18rem;
 }
 .sectionTop {
-	padding-top: 15rem;
+	padding-top: 16rem;
 }
 .sectionBottom {
-	padding-bottom: 15rem;
+	padding-bottom: 16rem;
 }
 
 @include whenMedium {
@@ -108,7 +108,7 @@
 .textBlock {
 	h1,
 	h2 {
-		margin-bottom: 7.2rem;
+		margin-bottom: 6rem;
 	}
 	h3,
 	h4,
