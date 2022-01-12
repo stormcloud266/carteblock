@@ -8,9 +8,13 @@ import { ThemeContext } from '@context/ThemeContext'
 
 const Header = ({ toggleTheme, theme }) => {
 	const [hasToggledTheme, setHasToggledTheme] = useState(() => {
-		const saved = localStorage.getItem('hasToggledTheme')
-		const initialValue = JSON.parse(saved)
-		return initialValue || false
+		if (typeof window !== 'undefined') {
+			const saved = localStorage.getItem('hasToggledTheme')
+			const initialValue = JSON.parse(saved)
+			return initialValue || false
+		} else {
+			return false
+		}
 	})
 	const [time, setTime] = useState()
 	const { isLightTheme, setIsLightTheme } = useContext(ThemeContext)
