@@ -176,11 +176,20 @@ const Services = () => {
 							animate={{
 								color: isLightTheme
 									? active === index
-										? '#000'
-										: '#ccc'
+										? '#333'
+										: '#eee'
 									: active === index
 									? '#eee'
 									: '#333',
+							}}
+							whileHover={{
+								color: isLightTheme
+									? active === index
+										? '#333'
+										: '#ccc'
+									: active === index
+									? '#eee'
+									: '#666',
 							}}
 							key={title}
 							onClick={() => setActive(index)}
