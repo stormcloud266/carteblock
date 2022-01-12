@@ -10,9 +10,6 @@
 	}
 }
 
-@include whenMedium {
-}
-
 @include whenSmall {
 	.container {
 		padding-bottom: 15rem;

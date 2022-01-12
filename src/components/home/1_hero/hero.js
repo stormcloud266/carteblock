@@ -7,7 +7,7 @@ const Hero = () => {
 	return (
 		<Container wrapperSmOnMd isSection className={styles.container}>
 			<Flex noHorizontalMargin collapseOnMd>
-				<Container textBlock className={styles.textContainer}>
+				<Container textBlock>
 					<Title tag='h1'>Blockchain Challenges, Unblocked.</Title>
 					<p>
 						We help startups & enterprises leverage decentralized solutions &

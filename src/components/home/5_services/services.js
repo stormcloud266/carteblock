@@ -18,7 +18,7 @@ const variants = {
 
 const Services = () => {
 	const [active, setActive] = useState(0)
-	const { isLightTheme, setIsLightTheme } = useContext(ThemeContext)
+	const { isLightTheme } = useContext(ThemeContext)
 
 	const data = [
 		{

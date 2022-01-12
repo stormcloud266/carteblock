@@ -12,9 +12,6 @@
 	}
 }
 
-@include whenMedium {
-}
-
 @include whenSmall {
 	.container {
 		padding-top: 8rem;

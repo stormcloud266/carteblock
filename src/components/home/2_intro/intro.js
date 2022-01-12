@@ -24,7 +24,7 @@ const Intro = () => {
 						capitalize on blockchain technology to introduce a new level of
 						transparency, efficiency & automation into their business processes.
 					</p>
-					<Button href='#services' noBlank>
+					<Button href='/#services' anchor>
 						Our Services
 					</Button>
 				</Container>

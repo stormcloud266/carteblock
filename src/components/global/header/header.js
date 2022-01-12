@@ -46,11 +46,11 @@ const Header = ({ toggleTheme, theme }) => {
 		} else {
 			localStorage.setItem('hasToggledTheme', JSON.stringify(true))
 		}
-	}, [hasToggledTheme])
+	}, [hasToggledTheme, toggleTheme])
 
 	useEffect(() => {
 		setIsLightTheme(theme === 'light' ? true : false)
-	}, [theme])
+	}, [theme, setIsLightTheme])
 
 	const handleThemeToggle = (theme) => {
 		toggleTheme(theme)
@@ -65,7 +65,7 @@ const Header = ({ toggleTheme, theme }) => {
 						<Logo />
 					</Link>
 
-					<div className={styles.clockContainer}>
+					<div>
 						<time className={styles.clock}>{time} SNG</time>
 					</div>
 				</Container>
@@ -75,10 +75,10 @@ const Header = ({ toggleTheme, theme }) => {
 				<div className={styles.togglesPosition}>
 					<motion.button
 						animate={{
-							borderColor: isLightTheme ? '#ccc' : 'transparent',
+							borderColor: isLightTheme ? '#ccc' : 'rgba(0,0,0,0)',
 							color: isLightTheme ? '#ccc' : '#666',
 						}}
-						transition={{ duration: 0.2 }}
+						transition={{ duration: 0.3 }}
 						className={styles.toggle}
 						onClick={() => handleThemeToggle('light')}
 						aria-label='use light theme.'
@@ -88,10 +88,10 @@ const Header = ({ toggleTheme, theme }) => {
 
 					<motion.button
 						animate={{
-							borderColor: !isLightTheme ? '#ccc' : 'transparent',
+							borderColor: !isLightTheme ? '#ccc' : 'rgba(0,0,0,0)',
 							color: !isLightTheme ? '#ccc' : '#666',
 						}}
-						transition={{ duration: 0.2 }}
+						transition={{ duration: 0.3 }}
 						className={styles.toggle}
 						onClick={() => handleThemeToggle('dark')}
 						aria-label='use dark theme.'

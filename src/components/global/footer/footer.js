@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Container, Title } from '@UI'
+import { Container } from '@UI'
 import { Logo } from '@images/icons'
 import * as styles from './footer.module.scss'
 
