@@ -76,6 +76,19 @@
 	.smallText {
 		font-size: $font-size-16;
 	}
+
+	.row {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.logo {
+		margin-bottom: 3rem;
+	}
+
+	div.smallText {
+		margin-bottom: 3rem;
+	}
 }
 
 @include whenSmall {

@@ -8,8 +8,8 @@ const Quote = () => {
 	const { isLightTheme } = useContext(ThemeContext)
 
 	return (
-		<Container wrapper isSection className={styles.container}>
-			<Flex noHorizontalMargin>
+		<Container wrapperSmOnMd isSection className={styles.container}>
+			<Flex noHorizontalMargin collapseOnMd>
 				<div className={styles.imageContainer}>
 					{isLightTheme ? (
 						<StaticImage
@@ -25,7 +25,7 @@ const Quote = () => {
 						/>
 					)}
 				</div>
-				<Container textBlock>
+				<Container textBlock className={styles.textContainer}>
 					<Title tag='h2' size={3} className={styles.title}>
 						“We develop actionable blockchain strategies, while supporting your
 						team through the necessary steps for growing your operation.”

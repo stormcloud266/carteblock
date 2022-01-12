@@ -76,6 +76,9 @@
 }
 
 @include whenMedium {
+	.imagesContainer {
+		margin-bottom: 4.5rem !important;
+	}
 }
 
 @include whenSmall {

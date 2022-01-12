@@ -26,7 +26,7 @@ const Footer = () => {
 
 	return (
 		<footer className={styles.footer}>
-			<Container wrapper>
+			<Container wrapperSmOnMd>
 				<div className={styles.row}>
 					<Link
 						to='/'

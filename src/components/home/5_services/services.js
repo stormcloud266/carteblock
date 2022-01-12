@@ -163,8 +163,13 @@ const Services = () => {
 	]
 
 	return (
-		<Container wrapper isSection className={styles.container} id='services'>
-			<Flex className={styles.marginBottom}>
+		<Container
+			wrapperSmOnMd
+			isSection
+			className={styles.container}
+			id='services'
+		>
+			<Flex collapseOnMd reverseOnMd className={styles.marginBottom}>
 				<div className={styles.buttonsContainer}>
 					{data.map(({ title }, index) => (
 						<motion.button
@@ -198,7 +203,7 @@ const Services = () => {
 				</div>
 			</Flex>
 
-			<Flex alignStart>
+			<Flex alignStart collapseOnMd>
 				<motion.div
 					variants={variants}
 					initial={'initial'}
