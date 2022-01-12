@@ -21,6 +21,21 @@
 
 .logo {
 	margin: 0 2rem 6rem;
+	max-width: 30rem;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+a.logo {
+	transition: all 0.3s;
+
+	&:hover {
+		opacity: 0.8;
+		transform: scale(1.02);
+	}
 }
 
 @include whenLarge {
@@ -32,11 +47,19 @@
 	.title {
 		margin-bottom: 12rem;
 	}
+
+	.logo {
+		max-width: 24rem;
+	}
 }
 
 @include whenMedium {
 	.container {
 		padding-bottom: 22rem;
+	}
+
+	.logo {
+		max-width: 18rem;
 	}
 }
 
@@ -44,5 +67,9 @@
 	.container {
 		padding-top: 16rem;
 		padding-bottom: 15rem;
+	}
+
+	.logo {
+		max-width: 14rem;
 	}
 }
