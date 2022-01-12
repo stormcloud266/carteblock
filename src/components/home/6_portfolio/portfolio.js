@@ -1,64 +1,90 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Title } from '@UI'
-import {
-	Algorand,
-	Opulous,
-	Bluebox,
-	Omnys,
-	Tinyman,
-	Unifty,
-	Openfabric,
-	Rif,
-	XpNetwork,
-	Tokemak,
-	InvestDao,
-} from '@images/icons'
+import { ThemeContext } from '@context/ThemeContext'
 import * as styles from './portfolio.module.scss'
 
 const Portfolio = () => {
+	const { isLightTheme } = useContext(ThemeContext)
+
+	const logos = useStaticQuery(graphql`
+		query HeaderQuery {
+			dark: allFile(
+				filter: {
+					sourceInstanceName: { eq: "logos" }
+					relativePath: { regex: "/dark/" }
+				}
+				sort: { order: ASC, fields: name }
+			) {
+				edges {
+					node {
+						id
+						name
+						publicURL
+					}
+				}
+			}
+			light: allFile(
+				filter: {
+					sourceInstanceName: { eq: "logos" }
+					relativePath: { regex: "/light/" }
+				}
+				sort: { order: ASC, fields: name }
+			) {
+				edges {
+					node {
+						id
+						name
+						publicURL
+					}
+				}
+			}
+		}
+	`)
+
 	const data = [
 		{
-			logo: <Algorand />,
+			text: 'algorand',
 			link: 'https://algorand.foundation/',
 		},
 		{
-			logo: <Opulous />,
+			text: 'opulous',
 			link: 'https://opulous.org/',
 		},
 		{
-			logo: <Bluebox />,
+			text: 'bluebox',
 			link: 'https://bluebox.info/',
 		},
 		{
-			logo: <Omnys />,
+			text: 'omnys',
 			link: '',
 		},
 		{
-			logo: <Tinyman />,
+			text: 'tinyman',
 			link: 'https://tinyman.org/',
 		},
 		{
-			logo: <Unifty />,
+			text: 'unifty',
 			link: 'https://www.unifty.com/',
 		},
 		{
-			logo: <Openfabric />,
+			text: 'openfabric',
 			link: 'https://openfabric.ai/',
 		},
 		{
-			logo: <Rif />,
+			text: 'rif',
 			link: 'https://www.rifos.org/',
 		},
 		{
-			logo: <XpNetwork />,
+			text: 'xpnetwork',
 			link: 'https://xp.network/',
 		},
 		{
-			logo: <Tokemak />,
+			text: 'tokemak',
 			link: 'https://www.tokemak.xyz/',
 		},
 		{
-			logo: <InvestDao />,
+			text: 'investdao',
 			link: 'https://investdao.io/',
 		},
 	]
@@ -69,23 +95,26 @@ const Portfolio = () => {
 				Portfolio
 			</Title>
 			<div className={styles.logosContainer}>
-				{data.map(({ logo, link }, index) =>
-					link ? (
+				{data.map(({ text, link }, index) => {
+					const logo =
+						logos[isLightTheme ? 'light' : 'dark'].edges[index].node.publicURL
+					return link ? (
 						<a
 							href={link}
 							className={styles.logo}
 							key={index}
 							target='_blank'
 							rel='noreferrer'
+							aria-label={`visit ${text} website`}
 						>
-							{logo}
+							<img src={logo} alt='' />
 						</a>
 					) : (
 						<span className={styles.logo} key={index}>
-							{logo}
+							<img src={logo} alt='' />
 						</span>
 					)
-				)}
+				})}
 			</div>
 		</Container>
 	)
