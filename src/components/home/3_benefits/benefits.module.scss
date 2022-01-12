@@ -24,6 +24,9 @@
 }
 
 @include whenLarge {
+	.description {
+		margin-top: 4.5rem;
+	}
 }
 
 @include whenMedium {

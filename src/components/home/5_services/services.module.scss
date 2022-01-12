@@ -65,6 +65,14 @@
 	.container {
 		padding-top: 12rem;
 	}
+
+	.marginBottom {
+		margin-bottom: 4.5rem;
+	}
+
+	.button {
+		margin-bottom: 4.5rem;
+	}
 }
 
 @include whenMedium {

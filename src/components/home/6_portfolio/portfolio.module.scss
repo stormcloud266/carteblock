@@ -28,6 +28,10 @@
 		padding-top: 24rem;
 		padding-bottom: 32rem;
 	}
+
+	.title {
+		margin-bottom: 12rem;
+	}
 }
 
 @include whenMedium {

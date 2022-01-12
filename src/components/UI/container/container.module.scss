@@ -140,3 +140,17 @@
 		padding-top: 0;
 	}
 }
+
+@include whenLarge {
+	.textBlock {
+		h1,
+		h2 {
+			margin-bottom: 4.5rem;
+		}
+
+		button,
+		a {
+			margin-top: 4.5rem;
+		}
+	}
+}

@@ -6,6 +6,9 @@
 }
 
 @include whenLarge {
+	.title {
+		margin-bottom: 8rem;
+	}
 }
 
 @include whenMedium {
