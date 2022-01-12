@@ -10,7 +10,7 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 100;
 	width: 100%;
 }
 
@@ -31,7 +31,7 @@
 	position: relative;
 	top: 0;
 	left: 0;
-	z-index: 99999;
+	z-index: 104;
 }
 
 .togglesPosition {
@@ -93,5 +93,19 @@
 
 	.logo {
 		max-width: 14rem;
+	}
+}
+
+@include whenXSmall {
+	.togglesPosition {
+		position: relative;
+		bottom: 0;
+	}
+
+	.togglesWrapper {
+		z-index: 1;
+	}
+	.container {
+		padding-right: 1.8rem;
 	}
 }

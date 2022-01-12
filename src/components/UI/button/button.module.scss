@@ -58,3 +58,9 @@
 		}
 	}
 }
+
+@include whenSmall {
+	.button {
+		font-size: $font-size-18;
+	}
+}
