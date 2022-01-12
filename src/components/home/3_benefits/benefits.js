@@ -23,7 +23,7 @@ const Benefits = () => {
 
 	return (
 		<Container wrapperSmOnMd isSection>
-			<Flex alignStart noHorizontalMargin collapseOnMd>
+			<Flex alignStart noHorizontalMargin noCollapseMargin collapseOnMd>
 				{data.map(({ title, description }, index) => (
 					<div key={title} className={styles.container}>
 						<Title size={2} tag='p' className={styles.label}>

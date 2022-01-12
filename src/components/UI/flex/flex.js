@@ -8,6 +8,7 @@ const Flex = ({
 	layout,
 	alignStart,
 	noHorizontalMargin,
+	noCollapseMargin,
 	reverseOnMd,
 	reverseOnSm,
 	isSection,
@@ -22,6 +23,7 @@ const Flex = ({
 		reverseOnSm && styles.reverseOnSm,
 		alignStart && styles.alignStart,
 		noHorizontalMargin && styles.noHorizontalMargin,
+		noCollapseMargin && styles.noCollapseMargin,
 		layout && layout === '1-2' && styles.flex12,
 		layout && layout === '2-1' && styles.flex21,
 		className && className
@@ -48,6 +50,7 @@ Flex.propTypes = {
 	reverseOnMd: PropTypes.bool,
 	reverseOnSm: PropTypes.bool,
 	noHorizontalMargin: PropTypes.bool,
+	noCollapseMargin: PropTypes.bool,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,

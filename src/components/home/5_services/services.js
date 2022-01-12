@@ -169,7 +169,12 @@ const Services = () => {
 			className={styles.container}
 			id='services'
 		>
-			<Flex collapseOnMd reverseOnMd className={styles.marginBottom}>
+			<Flex
+				collapseOnMd
+				reverseOnMd
+				noCollapseMargin
+				className={styles.marginBottom}
+			>
 				<div className={styles.buttonsContainer}>
 					{data.map(({ title }, index) => (
 						<motion.button

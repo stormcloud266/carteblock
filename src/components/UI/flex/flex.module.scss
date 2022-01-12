@@ -36,12 +36,14 @@
 	.collapseOnMd {
 		flex-direction: column;
 
-		&.flex,
-		&.flex21,
-		&.flex12 {
-			& > *:first-child {
-				margin-right: 0;
-				margin-bottom: $flex-row-gap;
+		&:not(.noCollapseMargin) {
+			&.flex,
+			&.flex21,
+			&.flex12 {
+				& > *:first-child {
+					margin-right: 0;
+					margin-bottom: $flex-row-gap;
+				}
 			}
 		}
 	}
@@ -49,11 +51,19 @@
 	.reverseOnMd {
 		& > *:nth-child(1) {
 			order: 2;
-			margin-bottom: 0;
 		}
+
 		& > *:nth-child(2) {
 			order: 1;
-			margin-bottom: $flex-row-gap;
+		}
+
+		&:not(.noCollapseMargin) {
+			& > *:nth-child(1) {
+				margin-bottom: 0;
+			}
+			& > *:nth-child(2) {
+				margin-bottom: $flex-row-gap;
+			}
 		}
 	}
 }
@@ -66,7 +76,12 @@
 
 		& > *:first-child {
 			margin-right: 0;
-			margin-bottom: $flex-row-gap;
+		}
+
+		&:not(.noCollapseMargin) {
+			& > *:first-child {
+				margin-bottom: $flex-row-gap;
+			}
 		}
 	}
 

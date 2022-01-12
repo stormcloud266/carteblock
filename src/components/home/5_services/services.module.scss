@@ -77,7 +77,7 @@
 
 @include whenMedium {
 	.imagesContainer {
-		margin-bottom: 4.5rem !important;
+		margin-bottom: 4.5rem;
 	}
 
 	.buttonsContainer,
@@ -86,7 +86,7 @@
 	}
 
 	.buttonsContainer {
-		margin-bottom: 0 !important;
+		margin-bottom: 0;
 	}
 }
 
@@ -106,6 +106,6 @@
 	.imagesContainer,
 	.marginBottom,
 	.button {
-		margin-bottom: 3rem !important;
+		margin-bottom: 3rem;
 	}
 }
