@@ -1,3 +1,5 @@
+@import '@globalStyles/mixins';
+
 .container {
 	padding-right: 6rem;
 	margin-right: 0;
@@ -19,4 +21,13 @@
 	.label {
 		color: #666;
 	}
+}
+
+@include whenLarge {
+}
+
+@include whenMedium {
+}
+
+@include whenSmall {
 }

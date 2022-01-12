@@ -1,4 +1,15 @@
+@import '@globalStyles/mixins';
+
 .title {
 	max-width: 100rem;
 	margin-bottom: 12rem;
+}
+
+@include whenLarge {
+}
+
+@include whenMedium {
+}
+
+@include whenSmall {
 }

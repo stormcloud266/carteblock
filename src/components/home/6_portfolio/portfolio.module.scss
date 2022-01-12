@@ -24,4 +24,21 @@
 }
 
 @include whenLarge {
+	.container {
+		padding-top: 24rem;
+		padding-bottom: 32rem;
+	}
+}
+
+@include whenMedium {
+	.container {
+		padding-bottom: 22rem;
+	}
+}
+
+@include whenSmall {
+	.container {
+		padding-top: 16rem;
+		padding-bottom: 15rem;
+	}
 }

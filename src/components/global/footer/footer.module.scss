@@ -55,6 +55,13 @@
 	}
 }
 
+@include whenLarge {
+	.footer {
+		padding-top: 20rem;
+		padding-bottom: 8rem;
+	}
+}
+
 @include whenMedium {
 	.nav a {
 		font-size: $font-size-20;
@@ -62,5 +69,12 @@
 
 	.smallText {
 		font-size: $font-size-16;
+	}
+}
+
+@include whenSmall {
+	.footer {
+		padding-top: 15rem;
+		padding-bottom: 6rem;
 	}
 }

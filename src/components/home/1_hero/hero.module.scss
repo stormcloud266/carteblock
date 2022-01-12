@@ -1,4 +1,23 @@
+@import '@globalStyles/mixins';
+
 .container {
 	padding-top: 18rem;
 	padding-bottom: 24rem;
+}
+
+@include whenLarge {
+	.container {
+		padding-top: 12rem;
+		padding-bottom: 16rem;
+	}
+}
+
+@include whenMedium {
+}
+
+@include whenSmall {
+	.container {
+		padding-top: 8rem;
+		padding-bottom: 11rem;
+	}
 }
