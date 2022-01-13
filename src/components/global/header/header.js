@@ -79,8 +79,8 @@ const Header = ({ toggleTheme, theme }) => {
 				<div className={styles.togglesPosition}>
 					<motion.button
 						animate={{
-							borderColor: isLightTheme ? '#ccc' : 'rgba(0,0,0,0)',
-							color: isLightTheme ? '#ccc' : '#666',
+							borderColor: theme === 'light' ? '#ccc' : 'rgba(0,0,0,0)',
+							color: theme === 'light' ? '#ccc' : '#666',
 						}}
 						transition={{ duration: 0.3 }}
 						className={styles.toggle}
@@ -92,8 +92,8 @@ const Header = ({ toggleTheme, theme }) => {
 
 					<motion.button
 						animate={{
-							borderColor: !isLightTheme ? '#ccc' : 'rgba(0,0,0,0)',
-							color: !isLightTheme ? '#ccc' : '#666',
+							borderColor: theme === 'dark' ? '#ccc' : 'rgba(0,0,0,0)',
+							color: theme === 'dark' ? '#ccc' : '#666',
 						}}
 						transition={{ duration: 0.3 }}
 						className={styles.toggle}

@@ -12,17 +12,21 @@ const Quote = () => {
 			<Flex noHorizontalMargin collapseOnMd>
 				<div className={styles.imageContainer}>
 					{isLightTheme ? (
-						<StaticImage
-							src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
-							alt=''
-							placeholder='blurred'
-						/>
+						<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
+							<StaticImage
+								src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
+								alt=''
+								placeholder='blurred'
+							/>
+						</div>
 					) : (
-						<StaticImage
-							src='../../../assets/images/PIXEL/CB-CHROME-BG-DARK.png'
-							alt=''
-							placeholder='blurred'
-						/>
+						<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
+							<StaticImage
+								src='../../../assets/images/PIXEL/CB-CHROME-BG-DARK.png'
+								alt=''
+								placeholder='blurred'
+							/>
+						</div>
 					)}
 				</div>
 				<Container textBlock className={styles.textContainer}>
