@@ -205,7 +205,10 @@ const Services = () => {
 					))}
 				</div>
 
-				<div className={styles.imagesContainer}>
+				<div
+					className={styles.imagesContainer}
+					style={{ opacity: isLightTheme !== null ? 1 : 0 }}
+				>
 					<motion.div
 						variants={variants}
 						initial={'initial'}
