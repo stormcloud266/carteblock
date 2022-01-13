@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Title } from '@UI'
 import { ThemeContext } from '@context/ThemeContext'
+import { portfolio } from '@data'
 import * as styles from './portfolio.module.scss'
 
 const Portfolio = () => {
@@ -42,56 +43,13 @@ const Portfolio = () => {
 		}
 	`)
 
-	const data = [
-		{
-			text: 'algorand',
-			link: 'https://algorand.foundation/',
-		},
-		{
-			text: 'opulous',
-			link: 'https://opulous.org/',
-		},
-		{
-			text: 'omnys',
-			link: '',
-		},
-		{
-			text: 'tinyman',
-			link: 'https://tinyman.org/',
-		},
-		{
-			text: 'unifty',
-			link: 'https://www.unifty.com/',
-		},
-		{
-			text: 'openfabric',
-			link: 'https://openfabric.ai/',
-		},
-		{
-			text: 'rif',
-			link: 'https://www.rifos.org/',
-		},
-		{
-			text: 'xpnetwork',
-			link: 'https://xp.network/',
-		},
-		{
-			text: 'tokemak',
-			link: 'https://www.tokemak.xyz/',
-		},
-		{
-			text: 'investdao',
-			link: 'https://investdao.io/',
-		},
-	]
-
 	return (
 		<Container wrapper isSection className={styles.container}>
 			<Title tag='h2' className={styles.title}>
 				Portfolio
 			</Title>
 			<div className={styles.logosContainer}>
-				{data.map(({ text, link }, index) => {
+				{portfolio.map(({ text, link }, index) => {
 					const logo =
 						logos[isLightTheme ? 'light' : 'dark'].edges[index].node.publicURL
 					return link ? (

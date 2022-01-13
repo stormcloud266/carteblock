@@ -2,28 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Container } from '@UI'
 import { Logo } from '@images/icons'
+import { footerLinks } from '@data'
 import * as styles from './footer.module.scss'
 
 const Footer = () => {
-	const data = [
-		{
-			text: 'Email',
-			link: 'mailto:info@carteblock.com',
-		},
-		{
-			text: 'LinkedIn',
-			link: 'https://www.linkedin.com/company/carteblock/',
-		},
-		{
-			text: 'Telegram',
-			link: '',
-		},
-		{
-			text: 'Twitter',
-			link: 'https://twitter.com/CarteBlockPR/media',
-		},
-	]
-
 	return (
 		<footer className={styles.footer}>
 			<Container wrapperSmOnMd>
@@ -37,7 +19,7 @@ const Footer = () => {
 					</Link>
 
 					<nav className={styles.nav}>
-						{data.map(({ text, link }) => (
+						{footerLinks.map(({ text, link }) => (
 							<a href={link} key={text} target='_blank' rel='noreferrer'>
 								{text}
 							</a>
