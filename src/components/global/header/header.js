@@ -17,7 +17,7 @@ const Header = ({ toggleTheme, theme }) => {
 		}
 	})
 	const [time, setTime] = useState()
-	const { isLightTheme, setIsLightTheme } = useContext(ThemeContext)
+	const { setIsLightTheme } = useContext(ThemeContext)
 
 	const getTime = () => {
 		const newTime = new Date().toLocaleString('en-GB', {

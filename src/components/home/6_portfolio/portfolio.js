@@ -52,10 +52,6 @@ const Portfolio = () => {
 			link: 'https://opulous.org/',
 		},
 		{
-			text: 'bluebox',
-			link: 'https://bluebox.info/',
-		},
-		{
 			text: 'omnys',
 			link: '',
 		},
