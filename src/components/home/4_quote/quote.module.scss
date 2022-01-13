@@ -57,6 +57,17 @@
 	}
 }
 
+.imageContainer {
+	opacity: 0;
+}
+
+:global(body.dark),
+:global(body.light) {
+	.imageContainer {
+		opacity: 1;
+	}
+}
+
 @include whenSmall {
 	.container {
 		padding-top: 16rem;
