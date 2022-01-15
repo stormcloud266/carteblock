@@ -4,11 +4,11 @@
 .button {
 	padding: 1.4rem 3rem;
 	cursor: pointer;
-	color: #333;
+	color: $color-dark-charcoal;
 	font-size: $font-size-30;
 	font-weight: 500;
 	background-color: $color-background;
-	border: 2px solid #333;
+	border: 2px solid $color-dark-charcoal;
 	border-radius: 6rem;
 	outline: none;
 	display: inline-flex;

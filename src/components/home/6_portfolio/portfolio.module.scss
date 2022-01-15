@@ -22,19 +22,26 @@
 .logo {
 	margin: 0 2.4rem 6rem;
 	max-width: 30rem;
+	color: $color-dark-charcoal;
 
-	img {
+	svg {
 		display: block;
 		width: 100%;
 	}
 }
 
-a.logo {
+a.logo,
+:global(body.dark) a.logo {
 	transition: all 0.3s;
 
 	&:hover {
-		opacity: 0.8;
-		transform: scale(1.02);
+		color: $color-cta;
+	}
+}
+
+:global(body.dark) {
+	.logo {
+		color: $color-bright-grey;
 	}
 }
 

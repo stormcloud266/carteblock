@@ -1,5 +1,17 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+import {
+	Algorand,
+	Opulous,
+	Omnys,
+	Tinyman,
+	Unifty,
+	Openfabric,
+	Rif,
+	XpNetwork,
+	Tokemak,
+	InvestDao,
+} from '@images/icons'
 
 export const footerLinks = [
 	{
@@ -182,42 +194,52 @@ export const services = [
 
 export const portfolio = [
 	{
+		logo: <Algorand />,
 		text: 'algorand',
 		link: 'https://algorand.foundation/',
 	},
 	{
+		logo: <Opulous />,
 		text: 'opulous',
 		link: 'https://opulous.org/',
 	},
+
 	{
-		text: 'omnys',
+		logo: <Omnys />,
 		link: '',
 	},
 	{
+		logo: <Tinyman />,
 		text: 'tinyman',
 		link: 'https://tinyman.org/',
 	},
 	{
+		logo: <Unifty />,
 		text: 'unifty',
 		link: 'https://www.unifty.com/',
 	},
 	{
+		logo: <Openfabric />,
 		text: 'openfabric',
 		link: 'https://openfabric.ai/',
 	},
 	{
+		logo: <Rif />,
 		text: 'rif',
 		link: 'https://www.rifos.org/',
 	},
 	{
+		logo: <XpNetwork />,
 		text: 'xpnetwork',
 		link: 'https://xp.network/',
 	},
 	{
+		logo: <Tokemak />,
 		text: 'tokemak',
 		link: 'https://www.tokemak.xyz/',
 	},
 	{
+		logo: <InvestDao />,
 		text: 'investdao',
 		link: 'https://investdao.io/',
 	},
