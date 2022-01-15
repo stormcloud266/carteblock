@@ -9,8 +9,8 @@ const Benefits = () => {
 			<Flex alignStart noHorizontalMargin noCollapseMargin collapseOnMd>
 				{benefits.map(({ title, description }, index) => (
 					<div key={title} className={styles.container}>
-						<Title size={2} tag='p' className={styles.label}>
-							0{index + 1}_
+						<Title size={3} tag='p' className={styles.label}>
+							0{index + 1}
 						</Title>
 						<Title tag='h3' size={2}>
 							{title}

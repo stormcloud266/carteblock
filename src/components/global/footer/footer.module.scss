@@ -39,7 +39,7 @@
 
 .smallText {
 	font-size: $font-size-18;
-	color: hsla(0, 0%, 60%, 1);
+	color: $color-bright-grey;
 }
 
 :global(body.dark) {

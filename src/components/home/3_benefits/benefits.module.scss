@@ -10,11 +10,14 @@
 }
 
 .label {
-	color: #ccc;
+	color: $color-cta;
+	font-weight: 700;
+	margin-bottom: 0.8rem;
 }
 
 .description {
-	margin-top: 6rem;
+	margin-top: 7.5rem;
+	font-size: $font-size-18;
 }
 
 :global(body.dark) {

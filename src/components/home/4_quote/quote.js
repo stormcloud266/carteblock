@@ -40,11 +40,8 @@ const Quote = () => {
 						long-term partnerships”
 					</p>
 					<div className={styles.author}>
-						<p>-</p>
-						<div>
-							<p>Miles Carroll</p>
-							<p>CEO, Carteblock</p>
-						</div>
+						<p>Miles Carroll</p>
+						<p>CEO, Carteblock</p>
 					</div>
 				</Container>
 			</Flex>

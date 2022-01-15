@@ -16,8 +16,9 @@ const Intro = () => {
 				</div>
 				<Container textBlock>
 					<Title size={2}>
-						Carteblock is a management consultancy that solves global blockchain
-						challenges.
+						Carteblock is a management
+						<br />
+						consultancy that solves global blockchain challenges.
 					</Title>
 					<p>
 						We help startups & enterprises leverage decentralized solutions &

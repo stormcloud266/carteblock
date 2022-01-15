@@ -39,7 +39,7 @@ const Services = () => {
 							animate={{
 								color: isLightTheme
 									? active === index
-										? '#333'
+										? '#000'
 										: '#eee'
 									: active === index
 									? '#eee'
@@ -49,10 +49,10 @@ const Services = () => {
 								color: isLightTheme
 									? active === index
 										? '#333'
-										: '#ccc'
+										: '#44fe70'
 									: active === index
 									? '#eee'
-									: '#666',
+									: '#44fe70',
 							}}
 							key={title}
 							onClick={() => setActive(index)}
