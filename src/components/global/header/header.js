@@ -5,6 +5,7 @@ import { Container } from '@UI'
 import { Logo } from '@images/icons'
 import * as styles from './header.module.scss'
 import { ThemeContext } from '@context/ThemeContext'
+import { HeaderOpacityContext } from '@context/HeaderOpacityContext'
 
 const Header = ({ toggleTheme, theme }) => {
 	const [hasToggledTheme, setHasToggledTheme] = useState(() => {
@@ -18,6 +19,8 @@ const Header = ({ toggleTheme, theme }) => {
 	})
 	const [time, setTime] = useState()
 	const { setIsLightTheme } = useContext(ThemeContext)
+	const { isHeaderHidden } = useContext(HeaderOpacityContext)
+	console.log('isHeaderHidden: ', isHeaderHidden)
 
 	const getTime = () => {
 		const newTime = new Date().toLocaleString('en-GB', {
@@ -62,7 +65,11 @@ const Header = ({ toggleTheme, theme }) => {
 	}
 
 	return (
-		<header className={styles.header}>
+		<motion.header
+			animate={{ y: isHeaderHidden ? '-100%' : 0 }}
+			transition={{ type: 'tween' }}
+			className={styles.header}
+		>
 			<Container wrapper className={styles.container}>
 				<Link to='/' className={styles.logo}>
 					<Logo />
@@ -97,7 +104,7 @@ const Header = ({ toggleTheme, theme }) => {
 					</motion.button>
 				</div>
 			</Container>
-		</header>
+		</motion.header>
 	)
 }
 
