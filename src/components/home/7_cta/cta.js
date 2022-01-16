@@ -6,10 +6,8 @@ import { HeaderOpacityContext } from '@context/HeaderOpacityContext'
 import * as styles from './cta.module.scss'
 
 const Cta = () => {
-	const { inView, entry, ref } = useInView({ triggerOnce: false })
-	const { isHeaderHidden, setIsHeaderHidden } = useContext(HeaderOpacityContext)
-
-	console.log('inView: ', inView)
+	const { inView, ref } = useInView({ triggerOnce: false })
+	const { setIsHeaderHidden } = useContext(HeaderOpacityContext)
 
 	useEffect(() => {
 		if (inView) {

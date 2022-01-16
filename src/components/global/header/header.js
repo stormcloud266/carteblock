@@ -20,7 +20,6 @@ const Header = ({ toggleTheme, theme }) => {
 	const [time, setTime] = useState()
 	const { setIsLightTheme } = useContext(ThemeContext)
 	const { isHeaderHidden } = useContext(HeaderOpacityContext)
-	console.log('isHeaderHidden: ', isHeaderHidden)
 
 	const getTime = () => {
 		const newTime = new Date().toLocaleString('en-GB', {
