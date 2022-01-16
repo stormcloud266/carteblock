@@ -81,7 +81,8 @@
 
 @include whenMedium {
 	.imagesContainer {
-		margin-bottom: 4.5rem;
+		margin-top: 4.5rem;
+		max-width: 100%;
 	}
 
 	.buttonsContainer,
@@ -91,6 +92,10 @@
 
 	.buttonsContainer {
 		margin-bottom: 0;
+	}
+
+	.excerpt {
+		display: none;
 	}
 }
 

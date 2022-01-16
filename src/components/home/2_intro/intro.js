@@ -6,7 +6,7 @@ import * as styles from './intro.module.scss'
 const Intro = () => {
 	return (
 		<Container wrapperSmOnMd isSection className={styles.container}>
-			<Flex noHorizontalMargin collapseOnMd reverseOnMd>
+			<Flex noHorizontalMargin collapseOnMd>
 				<div>
 					<StaticImage
 						src='../../../assets/images/PIXEL/CB-ILL-O2.png'

@@ -25,10 +25,9 @@
 	}
 
 	&:hover {
-		background-color: $color-cta;
+		background-color: $color-background;
 		border-color: $color-cta;
-		box-shadow: 0px 4px 4px 0px hsla(0, 0%, 20%, 0.25);
-
+		color: $color-cta;
 		svg {
 			transform: translateX(5px);
 		}
@@ -43,8 +42,6 @@
 
 		&:hover {
 			background-color: $color-background-dark;
-			border-color: $color-cta;
-			color: $color-cta;
 		}
 	}
 }
