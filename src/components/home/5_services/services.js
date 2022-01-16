@@ -62,16 +62,36 @@ const Services = () => {
 					className={styles.imagesContainer}
 					style={{ opacity: isLightTheme !== null ? 1 : 0 }}
 				>
-					<motion.div
-						variants={variants}
-						initial={'initial'}
-						animate={'animate'}
-						key={active}
-					>
-						{isLightTheme
-							? services[active].lightImage
-							: services[active].darkImage}
-					</motion.div>
+					{services.map(({ lightImage, darkImage }, index) => {
+						return (
+							<React.Fragment key={`${index + 1}`}>
+								<motion.div
+									variants={variants}
+									initial={'initial'}
+									style={{
+										position: index === 0 ? 'relative' : 'absolute',
+										top: 0,
+										left: 0,
+									}}
+									animate={{
+										opacity: active === index && isLightTheme ? 1 : 0,
+									}}
+								>
+									{lightImage}
+								</motion.div>
+								<motion.div
+									variants={variants}
+									style={{ position: 'absolute', top: 0, left: 0 }}
+									initial={'initial'}
+									animate={{
+										opacity: active === index && !isLightTheme ? 1 : 0,
+									}}
+								>
+									{darkImage}
+								</motion.div>
+							</React.Fragment>
+						)
+					})}
 				</div>
 			</Flex>
 
