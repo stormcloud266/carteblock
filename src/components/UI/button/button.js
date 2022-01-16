@@ -10,6 +10,7 @@ const Button = ({
 	href,
 	to,
 	anchor,
+	solidGreen,
 	children,
 	className,
 	noBlank,

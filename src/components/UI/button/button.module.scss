@@ -2,14 +2,14 @@
 @import '@globalStyles/mixins';
 
 .button {
-	padding: 1.4rem 3rem;
+	padding: 1.2rem 3rem;
 	cursor: pointer;
-	color: $color-dark-charcoal;
+	color: #000;
 	font-size: $font-size-30;
 	font-weight: 500;
+	font-family: $font-family-title;
 	background-color: $color-background;
-	border: 2px solid $color-dark-charcoal;
-	border-radius: 6rem;
+	border: 3px solid black;
 	outline: none;
 	display: inline-flex;
 	align-items: center;
@@ -19,13 +19,15 @@
 	min-width: 30rem;
 
 	svg {
-		margin-left: 2.4rem;
-		width: 2.2rem;
-		transition: all 0.2s;
+		margin-left: 3.5rem;
+		width: 2.8rem;
+		transition: transform 0.2s;
 	}
 
 	&:hover {
-		box-shadow: 0px 2px 10px 0px hsla(0, 0%, 20%, 0.25);
+		background-color: $color-cta;
+		border-color: $color-cta;
+		box-shadow: 0px 4px 4px 0px hsla(0, 0%, 20%, 0.25);
 
 		svg {
 			transform: translateX(5px);
@@ -38,6 +40,12 @@
 		background-color: $color-background-dark;
 		border-color: hsla(0, 0%, 93%, 1);
 		color: hsla(0, 0%, 93%, 1);
+
+		&:hover {
+			background-color: $color-background-dark;
+			border-color: $color-cta;
+			color: $color-cta;
+		}
 	}
 }
 
