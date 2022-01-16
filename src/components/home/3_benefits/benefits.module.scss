@@ -8,7 +8,7 @@
 	padding-right: 6rem;
 	margin-right: 0;
 	position: sticky;
-	top: 15rem;
+	top: 35rem;
 	flex: 1;
 	height: 80rem;
 
@@ -44,6 +44,7 @@
 @include whenLarge {
 	.sectionContainer {
 		height: 64rem;
+		top: 25rem;
 	}
 
 	.description {

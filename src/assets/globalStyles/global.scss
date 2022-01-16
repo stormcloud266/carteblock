@@ -41,6 +41,10 @@ body.dark {
 	h6 {
 		color: $color-bright-grey;
 	}
+
+	button h2 {
+		color: inherit;
+	}
 }
 
 main:focus {

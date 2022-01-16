@@ -37,7 +37,6 @@ const BenefitCard = ({ number, title, description }) => {
 			initial='hidden'
 			animate={controls}
 		>
-			{console.log('inView: ', inView)}
 			<Title size={3} tag='p' className={styles.label}>
 				{number}
 			</Title>
