@@ -25,6 +25,10 @@ body {
 	font-feature-settings: 'ss02' 1;
 }
 
+::selection {
+	background: $color-cta;
+}
+
 body.dark {
 	color: $color-text-accent;
 	background-color: $color-background-dark;
