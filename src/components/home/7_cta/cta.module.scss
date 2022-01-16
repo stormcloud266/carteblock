@@ -1,13 +1,18 @@
 @import '@globalStyles/mixins';
 
+.textContainer {
+	padding-right: 4rem;
+}
+
 .title {
 	max-width: 100rem;
-	margin-bottom: 12rem;
+	margin-bottom: 6rem;
 	line-height: 1.33;
 }
 
-@include whenLarge {
-	.title {
-		margin-bottom: 8rem;
+@include whenMedium {
+	.textContainer {
+		padding-right: 0;
+		margin-top: 6rem;
 	}
 }
