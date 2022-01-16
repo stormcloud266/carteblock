@@ -14,29 +14,11 @@
 	width: 100%;
 }
 
-.container,
-.togglesWrapper {
+.container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	max-width: 168rem;
-}
-
-.container {
-	padding-right: 16rem;
-}
-
-.togglesWrapper {
-	justify-content: flex-end;
-	position: relative;
-	top: 0;
-	left: 0;
-	z-index: 104;
-}
-
-.togglesPosition {
-	position: absolute;
-	bottom: calc(100% + 1.8rem);
 }
 
 .logo {
@@ -56,6 +38,10 @@
 	font-size: $font-size-18;
 	color: #ccc;
 	font-weight: 500;
+}
+
+.clock {
+	margin-right: 3.6rem;
 }
 
 .toggle {
@@ -86,25 +72,12 @@
 	.clock {
 		font-size: $font-size-16;
 	}
-	.container {
-		padding-right: 14rem;
+
+	.clock {
+		margin-right: 1.6rem;
 	}
 
 	.logo {
 		max-width: 14rem;
-	}
-}
-
-@include whenXSmall {
-	.togglesPosition {
-		position: relative;
-		bottom: 0;
-	}
-
-	.togglesWrapper {
-		z-index: 1;
-	}
-	.container {
-		padding-right: 1.8rem;
 	}
 }

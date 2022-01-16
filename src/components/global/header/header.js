@@ -62,21 +62,14 @@ const Header = ({ toggleTheme, theme }) => {
 	}
 
 	return (
-		<>
-			<header className={styles.header}>
-				<Container wrapper className={styles.container}>
-					<Link to='/' className={styles.logo}>
-						<Logo />
-					</Link>
+		<header className={styles.header}>
+			<Container wrapper className={styles.container}>
+				<Link to='/' className={styles.logo}>
+					<Logo />
+				</Link>
 
-					<div>
-						<time className={styles.clock}>{time} SNG</time>
-					</div>
-				</Container>
-			</header>
-
-			<Container wrapper className={styles.togglesWrapper}>
-				<div className={styles.togglesPosition}>
+				<div>
+					<time className={styles.clock}>{time} SNG</time>
 					<motion.button
 						animate={{
 							borderColor: theme === 'light' ? '#ccc' : 'rgba(0,0,0,0)',
@@ -104,7 +97,7 @@ const Header = ({ toggleTheme, theme }) => {
 					</motion.button>
 				</div>
 			</Container>
-		</>
+		</header>
 	)
 }
 
