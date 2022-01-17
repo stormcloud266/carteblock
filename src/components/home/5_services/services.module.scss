@@ -130,3 +130,9 @@
 		margin-bottom: 3rem;
 	}
 }
+
+@include whenXSmall {
+	.list {
+		font-size: $font-size-16;
+	}
+}
