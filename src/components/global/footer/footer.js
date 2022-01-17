@@ -10,7 +10,7 @@ const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<Fade>
-				<Container wrapper>
+				<Container wrapper className={styles.container}>
 					<div className={styles.row}>
 						<Link
 							to='/'
