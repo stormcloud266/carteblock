@@ -8,12 +8,12 @@ import classnames from 'classnames'
 import { Arrow } from '@images/icons'
 import * as styles from './button.module.scss'
 
-const Wrapper = ({ children }) => {
+const Wrapper = ({ delay, children }) => {
 	const controls = useAnimation()
 
 	const variants = {
 		hidden: { opacity: 0 },
-		visible: { opacity: 1, transition: { duration: 1 } },
+		visible: { opacity: 1, transition: { duration: 1, delay } },
 	}
 
 	const inViewOptions = {
@@ -39,12 +39,12 @@ const Wrapper = ({ children }) => {
 	)
 }
 
-const MotionArrow = () => {
+const MotionArrow = ({ delay }) => {
 	const controls = useAnimation()
 
 	const variants = {
 		hidden: { x: -7 },
-		visible: { x: 0, transition: { duration: 0.5, delay: 0.3 } },
+		visible: { x: 0, transition: { duration: 0.5, delay: delay + 0.3 } },
 	}
 
 	const inViewOptions = {
@@ -83,13 +83,14 @@ const Button = ({
 	children,
 	className,
 	noBlank,
+	delay = 0,
 	...rest
 }) => {
 	const classes = classnames(styles.button, className && className)
 
 	if (href && !anchor) {
 		return (
-			<Wrapper>
+			<Wrapper delay={delay}>
 				<a
 					href={href}
 					className={classes}
@@ -97,31 +98,31 @@ const Button = ({
 					rel='noreferrer'
 					{...rest}
 				>
-					{children} <MotionArrow />
+					{children} <MotionArrow delay={delay} />
 				</a>
 			</Wrapper>
 		)
 	} else if (anchor) {
 		return (
-			<Wrapper>
+			<Wrapper delay={delay}>
 				<AnchorLink className={classes} {...rest} to={href}>
-					{children} <MotionArrow />
+					{children} <MotionArrow delay={delay} />
 				</AnchorLink>
 			</Wrapper>
 		)
 	} else if (to) {
 		return (
-			<Wrapper>
+			<Wrapper delay={delay}>
 				<Link to={to} {...rest} className={classes}>
-					{children} <Arrow />
+					{children} <MotionArrow delay={delay} />
 				</Link>
 			</Wrapper>
 		)
 	} else {
 		return (
-			<Wrapper>
+			<Wrapper delay={delay}>
 				<button {...rest} className={classes}>
-					{children} <Arrow />
+					{children} <MotionArrow delay={delay} />
 				</button>
 			</Wrapper>
 		)

@@ -33,7 +33,7 @@ const Intro = () => {
 							processes.
 						</p>
 					</Fade>
-					<Button href='/#services' anchor>
+					<Button href='/#services' anchor delay={1}>
 						Our Services
 					</Button>
 				</Container>

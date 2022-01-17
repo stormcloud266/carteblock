@@ -25,7 +25,9 @@ const Hero = () => {
 							processes.
 						</p>
 					</Fade>
-					<Button href='mailto:info@carteblock.com'>Say Hello</Button>
+					<Button href='mailto:info@carteblock.com' delay={2.4}>
+						Say Hello
+					</Button>
 				</Container>
 				<Parallax offset={30}>
 					<Fade delay={0.4} y={30} duration={2}>
