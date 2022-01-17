@@ -8,20 +8,19 @@ import classnames from 'classnames'
 import { Arrow } from '@images/icons'
 import * as styles from './button.module.scss'
 
+const inViewOptions = {
+	triggerOnce: false,
+	threshold: 0.3,
+}
+
 const Wrapper = ({ delay, children }) => {
 	const controls = useAnimation()
+	const [ref, inView] = useInView(inViewOptions)
 
 	const variants = {
 		hidden: { opacity: 0 },
 		visible: { opacity: 1, transition: { duration: 1, delay } },
 	}
-
-	const inViewOptions = {
-		triggerOnce: false,
-		threshold: 0.3,
-	}
-
-	const [ref, inView] = useInView(inViewOptions)
 
 	if (inView) {
 		controls.start('visible')
@@ -41,18 +40,12 @@ const Wrapper = ({ delay, children }) => {
 
 const MotionArrow = ({ delay }) => {
 	const controls = useAnimation()
+	const [ref, inView] = useInView(inViewOptions)
 
 	const variants = {
 		hidden: { x: -7 },
 		visible: { x: 0, transition: { duration: 0.5, delay: delay + 0.3 } },
 	}
-
-	const inViewOptions = {
-		triggerOnce: false,
-		threshold: 0.3,
-	}
-
-	const [ref, inView] = useInView(inViewOptions)
 
 	useEffect(() => {
 		if (inView) {
@@ -88,45 +81,47 @@ const Button = ({
 }) => {
 	const classes = classnames(styles.button, className && className)
 
+	let element
+
+	const content = (
+		<>
+			{children} <MotionArrow delay={delay} />
+		</>
+	)
+
 	if (href && !anchor) {
-		return (
-			<Wrapper delay={delay}>
-				<a
-					href={href}
-					className={classes}
-					target='_blank'
-					rel='noreferrer'
-					{...rest}
-				>
-					{children} <MotionArrow delay={delay} />
-				</a>
-			</Wrapper>
+		element = (
+			<a
+				href={href}
+				className={classes}
+				target='_blank'
+				rel='noreferrer'
+				{...rest}
+			>
+				{content}
+			</a>
 		)
 	} else if (anchor) {
-		return (
-			<Wrapper delay={delay}>
-				<AnchorLink className={classes} {...rest} to={href}>
-					{children} <MotionArrow delay={delay} />
-				</AnchorLink>
-			</Wrapper>
+		element = (
+			<AnchorLink className={classes} {...rest} to={href}>
+				{content}
+			</AnchorLink>
 		)
 	} else if (to) {
-		return (
-			<Wrapper delay={delay}>
-				<Link to={to} {...rest} className={classes}>
-					{children} <MotionArrow delay={delay} />
-				</Link>
-			</Wrapper>
+		element = (
+			<Link to={to} {...rest} className={classes}>
+				{content}
+			</Link>
 		)
 	} else {
-		return (
-			<Wrapper delay={delay}>
-				<button {...rest} className={classes}>
-					{children} <MotionArrow delay={delay} />
-				</button>
-			</Wrapper>
+		element = (
+			<button {...rest} className={classes}>
+				{content}
+			</button>
 		)
 	}
+
+	return <Wrapper delay={delay}>{element}</Wrapper>
 }
 
 export default Button

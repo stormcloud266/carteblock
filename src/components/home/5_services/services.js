@@ -1,26 +1,12 @@
 import React, { useState, useContext } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { ThemeContext } from '@context/ThemeContext'
 import { Container, Flex, Title } from '@UI'
 import { Fade } from '@animations'
 import { services } from '@data'
 import * as styles from './services.module.scss'
 
-const variants = {
-	initial: {
-		opacity: 0,
-		y: 20,
-		transition: { duration: 0.7 },
-	},
-	animate: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.7 },
-	},
-}
-
-const imgVariants = {
+const excerptVariants = {
 	initial: {
 		opacity: 0,
 		y: 20,
@@ -54,21 +40,28 @@ const itemVariants = {
 	},
 }
 
+const imageAnimation = {
+	initial: {
+		opacity: 0,
+		y: 20,
+	},
+	transition: {
+		opacity: { duration: 0.8 },
+		default: { duration: 1.3 },
+	},
+}
+
 const Services = () => {
 	const [active, setActive] = useState(0)
 	const { isLightTheme } = useContext(ThemeContext)
-
 	const controls = useAnimation()
 
-	const inViewOptions = {
-		triggerOnce: false,
-		threshold: 0.3,
-	}
-
-	const [ref, inView] = useInView(inViewOptions)
-
-	if (inView) {
-		controls.start('show')
+	const handleImageAnimation = (isVisible) => {
+		if (isVisible) {
+			controls.start('animate')
+		} else {
+			controls.start('initial')
+		}
 	}
 
 	return (
@@ -120,8 +113,7 @@ const Services = () => {
 							return (
 								<React.Fragment key={`${index + 1}`}>
 									<motion.div
-										variants={imgVariants}
-										initial={'initial'}
+										initial={imageAnimation.initial}
 										style={{
 											position: index === 0 ? 'relative' : 'absolute',
 											top: 0,
@@ -131,19 +123,18 @@ const Services = () => {
 											opacity: active === index && isLightTheme ? 1 : 0,
 											y: active === index && isLightTheme ? 0 : 20,
 										}}
-										transition={{ duration: 1 }}
+										transition={imageAnimation.transition}
 									>
 										{lightImage}
 									</motion.div>
 									<motion.div
-										variants={imgVariants}
 										style={{ position: 'absolute', top: 0, left: 0 }}
-										initial={'initial'}
+										initial={imageAnimation.initial}
 										animate={{
 											opacity: active === index && !isLightTheme ? 1 : 0,
 											y: active === index && !isLightTheme ? 0 : 20,
 										}}
-										transition={{ duration: 1 }}
+										transition={imageAnimation.transition}
 									>
 										{darkImage}
 									</motion.div>
@@ -157,7 +148,7 @@ const Services = () => {
 			<Flex alignStart collapseOnMd>
 				<Fade>
 					<motion.div
-						variants={variants}
+						variants={excerptVariants}
 						initial={'initial'}
 						animate={'animate'}
 						key={services[active].excerpt}

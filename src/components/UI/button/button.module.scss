@@ -47,6 +47,8 @@
 
 		&:hover {
 			background-color: $color-background-dark;
+			border-color: $color-cta;
+			color: $color-cta;
 		}
 	}
 }
