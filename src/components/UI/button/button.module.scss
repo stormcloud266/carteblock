@@ -32,6 +32,11 @@
 			transform: translateX(5px);
 		}
 	}
+
+	span {
+		display: block;
+		margin-bottom: -4px;
+	}
 }
 
 :global(body.dark) {

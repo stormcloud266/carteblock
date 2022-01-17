@@ -1,10 +1,74 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { Arrow } from '@images/icons'
 import * as styles from './button.module.scss'
+
+const Wrapper = ({ children }) => {
+	const controls = useAnimation()
+
+	const variants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1, transition: { duration: 0.8 } },
+	}
+
+	const inViewOptions = {
+		triggerOnce: false,
+		threshold: 0.3,
+	}
+
+	const [ref, inView] = useInView(inViewOptions)
+
+	if (inView) {
+		controls.start('visible')
+	}
+
+	return (
+		<motion.div
+			ref={ref}
+			variants={variants}
+			initial='hidden'
+			animate={controls}
+		>
+			{children}
+		</motion.div>
+	)
+}
+
+const MotionArrow = () => {
+	const controls = useAnimation()
+
+	const variants = {
+		hidden: { opacity: 0, x: -10 },
+		visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3 } },
+	}
+
+	const inViewOptions = {
+		triggerOnce: false,
+		threshold: 0.3,
+	}
+
+	const [ref, inView] = useInView(inViewOptions)
+
+	if (inView) {
+		controls.start('visible')
+	}
+
+	return (
+		<motion.span
+			ref={ref}
+			variants={variants}
+			initial='hidden'
+			animate={controls}
+		>
+			<Arrow />
+		</motion.span>
+	)
+}
 
 const Button = ({
 	href,
@@ -20,33 +84,41 @@ const Button = ({
 
 	if (href && !anchor) {
 		return (
-			<a
-				href={href}
-				className={classes}
-				target='_blank'
-				rel='noreferrer'
-				{...rest}
-			>
-				{children} <Arrow />
-			</a>
+			<Wrapper>
+				<a
+					href={href}
+					className={classes}
+					target='_blank'
+					rel='noreferrer'
+					{...rest}
+				>
+					{children} <MotionArrow />
+				</a>
+			</Wrapper>
 		)
 	} else if (anchor) {
 		return (
-			<AnchorLink className={classes} {...rest} to={href}>
-				{children} <Arrow />
-			</AnchorLink>
+			<Wrapper>
+				<AnchorLink className={classes} {...rest} to={href}>
+					{children} <MotionArrow />
+				</AnchorLink>
+			</Wrapper>
 		)
 	} else if (to) {
 		return (
-			<Link to={to} {...rest} className={classes}>
-				{children} <Arrow />
-			</Link>
+			<Wrapper>
+				<Link to={to} {...rest} className={classes}>
+					{children} <Arrow />
+				</Link>
+			</Wrapper>
 		)
 	} else {
 		return (
-			<button {...rest} className={classes}>
-				{children} <Arrow />
-			</button>
+			<Wrapper>
+				<button {...rest} className={classes}>
+					{children} <Arrow />
+				</button>
+			</Wrapper>
 		)
 	}
 }

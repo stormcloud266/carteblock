@@ -15,7 +15,7 @@ const BenefitCard = ({ number, title, description }) => {
 
 	const inViewOptions = {
 		triggerOnce: false,
-		threshold: 0.3,
+		threshold: 0.05,
 	}
 
 	const [ref, inView] = useInView(inViewOptions)
