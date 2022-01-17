@@ -8,6 +8,7 @@
 .imagesContainer {
 	position: relative;
 	max-width: 60rem;
+	margin-right: 0;
 }
 
 .marginBottom {
@@ -32,13 +33,12 @@
 }
 
 .excerptContainer {
-	padding-right: 4rem;
+	max-width: 72rem;
 	font-weight: 700;
 }
 
 .excerpt {
 	line-height: 1.3;
-	max-width: 70rem;
 }
 
 .title {
@@ -49,6 +49,9 @@
 .list {
 	max-width: 60.5rem;
 	color: $color-cta;
+	margin-right: 0;
+	margin-left: auto;
+
 	.dot {
 		display: flex;
 		&::before {
@@ -78,6 +81,9 @@
 	.button {
 		margin-bottom: 4.5rem;
 	}
+	.excerptContainer {
+		max-width: 52rem;
+	}
 
 	.title {
 		font-size: $font-size-36;
@@ -101,6 +107,10 @@
 
 	.excerpt {
 		display: none;
+	}
+
+	.list {
+		margin-left: 0;
 	}
 }
 

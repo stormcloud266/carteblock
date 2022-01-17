@@ -36,7 +36,10 @@ const Cta = () => {
 					</div>
 				</div>
 
-				<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
+				<div
+					style={{ opacity: isLightTheme !== null ? 1 : 0 }}
+					className={styles.imageContainer}
+				>
 					<Parallax offset={30}>
 						<Fade duration={2} y={30}>
 							{isLightTheme ? (

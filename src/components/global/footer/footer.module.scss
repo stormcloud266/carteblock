@@ -19,6 +19,10 @@
 	color: black;
 	width: 100%;
 	max-width: 18rem;
+	transition: color 0.2s;
+	&:hover {
+		color: $color-cta;
+	}
 }
 
 .nav,
@@ -33,7 +37,7 @@
 	font-size: $font-size-24;
 
 	&:hover {
-		color: #ccc;
+		color: $color-cta;
 	}
 }
 
@@ -46,12 +50,16 @@
 	.nav a {
 		color: $color-text-accent;
 		&:hover {
-			color: #666;
+			color: $color-cta;
 		}
 	}
 
 	.logo {
 		color: white;
+		transition: color 0.2s;
+		&:hover {
+			color: $color-cta;
+		}
 	}
 }
 
@@ -79,6 +87,13 @@
 	.smallText {
 		font-size: $font-size-16;
 	}
+}
+
+@include whenSmall {
+	.footer {
+		padding-top: 15rem;
+		padding-bottom: 6rem;
+	}
 
 	.row {
 		flex-direction: column;
@@ -88,13 +103,6 @@
 	div.smallText,
 	.logo {
 		margin-bottom: 3rem;
-	}
-}
-
-@include whenSmall {
-	.footer {
-		padding-top: 15rem;
-		padding-bottom: 6rem;
 	}
 
 	.nav a {

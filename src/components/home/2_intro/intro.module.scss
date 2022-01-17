@@ -4,14 +4,36 @@
 	padding-bottom: 32rem;
 }
 
+.flexContainer {
+	justify-content: space-between;
+}
+
+.imageContainer {
+	margin-left: -8rem;
+	max-width: 80rem;
+}
+
+.textContainer {
+	max-width: 82rem;
+}
+
 @include whenLarge {
 	.container {
 		padding-bottom: 22rem;
+	}
+	.imageContainer {
+		margin-left: -6.4rem;
+	}
+}
+@include whenMedium {
+	.imageContainer {
+		margin-left: 0;
 	}
 }
 
 @include whenSmall {
 	.container {
 		padding-bottom: 15rem;
+		justify-content: center;
 	}
 }

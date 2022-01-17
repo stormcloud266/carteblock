@@ -23,10 +23,6 @@ export const footerLinks = [
 		link: 'https://www.linkedin.com/company/carteblock/',
 	},
 	{
-		text: 'Telegram',
-		link: '',
-	},
-	{
 		text: 'Twitter',
 		link: 'https://twitter.com/CarteBlockPR/media',
 	},

@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Container, Flex, Title, Button } from '@UI'
 import { Fade, Parallax } from '@animations'
 import * as styles from './hero.module.scss'
+import { useCurrentWidth } from '@hooks'
 
 const Hero = () => {
+	const [delay, setDelay] = useState(2.4)
+	const width = useCurrentWidth()
+
+	useEffect(() => {
+		if (width < 1080) {
+			setDelay(0)
+		} else {
+			setDelay(2.4)
+		}
+	}, [width])
+
 	return (
 		<Container wrapperSmOnMd isSection className={styles.container}>
 			<Flex noHorizontalMargin collapseOnMd reverseOnMd>
-				<Container textBlock>
+				<Container textBlock className={styles.textContainer}>
 					<Title tag='h1'>
 						<Fade inline delay={0.3} duration={1}>
 							Blockchain Challenges,
@@ -25,7 +37,7 @@ const Hero = () => {
 							processes.
 						</p>
 					</Fade>
-					<Button href='mailto:info@carteblock.com' delay={2.4}>
+					<Button href='mailto:info@carteblock.com' delay={delay}>
 						Say Hello
 					</Button>
 				</Container>

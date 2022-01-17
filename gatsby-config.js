@@ -41,6 +41,7 @@ module.exports = {
 					'@images': path.resolve(__dirname, 'src/assets/images'),
 					'@globalStyles': path.resolve(__dirname, 'src/assets/globalStyles'),
 					'@context': path.resolve(__dirname, 'src/context'),
+					'@hooks': path.resolve(__dirname, 'src/hooks'),
 					'@data': path.resolve(__dirname, 'src/data'),
 				},
 			},

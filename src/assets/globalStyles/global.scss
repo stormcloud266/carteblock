@@ -23,6 +23,7 @@ body {
 	font-weight: 400;
 	line-height: 1.55;
 	font-feature-settings: 'ss02' 1;
+	cursor: url(../images/cursor/cursor-lg.svg) 30 30, default;
 }
 
 ::selection {
@@ -32,6 +33,15 @@ body {
 body.dark {
 	color: $color-text-accent;
 	background-color: $color-background-dark;
+	cursor: url(../images/cursor/cursor-lg-white.svg) 30 30, default;
+
+	button,
+	a {
+		cursor: url(../images/cursor/cursor-lg-white.svg) 30 30, default;
+		&:hover {
+			cursor: url(../images/cursor/cursor-lg-green.svg) 30 30, default;
+		}
+	}
 
 	h1,
 	h2,
@@ -89,7 +99,14 @@ textarea {
 button {
 	border: none;
 	outline: none;
-	cursor: pointer;
+}
+
+button,
+a {
+	cursor: url(../images/cursor/cursor-lg.svg) 30 30, default;
+	&:hover {
+		cursor: url(../images/cursor/cursor-lg-green.svg) 30 30, default;
+	}
 }
 
 @include whenLarge {
