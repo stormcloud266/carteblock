@@ -95,45 +95,45 @@ const Services = () => {
 					</div>
 				</Fade>
 
-				{/* <Fade y={30} duration={2}> */}
 				<div
 					className={styles.imagesContainer}
 					style={{ opacity: isLightTheme !== null ? 1 : 0 }}
 				>
-					{services.map(({ lightImage, darkImage }, index) => {
-						return (
-							<React.Fragment key={`${index + 1}`}>
-								<motion.div
-									initial={imageAnimation.initial}
-									style={{
-										position: index === 0 ? 'relative' : 'absolute',
-										top: 0,
-										left: 0,
-									}}
-									animate={{
-										opacity: active === index && isLightTheme ? 1 : 0,
-										y: active === index && isLightTheme ? 0 : 20,
-									}}
-									transition={imageAnimation.transition}
-								>
-									{lightImage}
-								</motion.div>
-								<motion.div
-									style={{ position: 'absolute', top: 0, left: 0 }}
-									initial={imageAnimation.initial}
-									animate={{
-										opacity: active === index && !isLightTheme ? 1 : 0,
-										y: active === index && !isLightTheme ? 0 : 20,
-									}}
-									transition={imageAnimation.transition}
-								>
-									{darkImage}
-								</motion.div>
-							</React.Fragment>
-						)
-					})}
+					<Fade y={30} duration={2}>
+						{services.map(({ lightImage, darkImage }, index) => {
+							return (
+								<React.Fragment key={`${index + 1}`}>
+									<motion.div
+										initial={imageAnimation.initial}
+										style={{
+											position: index === 0 ? 'relative' : 'absolute',
+											top: 0,
+											left: 0,
+										}}
+										animate={{
+											opacity: active === index && isLightTheme ? 1 : 0,
+											y: active === index && isLightTheme ? 0 : 20,
+										}}
+										transition={imageAnimation.transition}
+									>
+										{lightImage}
+									</motion.div>
+									<motion.div
+										style={{ position: 'absolute', top: 0, left: 0 }}
+										initial={imageAnimation.initial}
+										animate={{
+											opacity: active === index && !isLightTheme ? 1 : 0,
+											y: active === index && !isLightTheme ? 0 : 20,
+										}}
+										transition={imageAnimation.transition}
+									>
+										{darkImage}
+									</motion.div>
+								</React.Fragment>
+							)
+						})}
+					</Fade>
 				</div>
-				{/* </Fade> */}
 			</Flex>
 
 			<Flex alignStart collapseOnMd noCollapseMargin>

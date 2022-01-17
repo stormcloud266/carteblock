@@ -15,7 +15,7 @@
 	justify-content: space-between;
 	align-items: center;
 	&:first-of-type {
-		margin-bottom: 6rem;
+		margin-bottom: 3rem;
 	}
 }
 
@@ -47,7 +47,7 @@
 
 .smallText {
 	font-size: $font-size-18;
-	color: $color-bright-grey;
+	color: #999;
 }
 
 :global(body.dark) {
@@ -70,13 +70,6 @@
 @include whenLarge {
 	.footer {
 		padding-top: 20rem;
-		padding-bottom: 8rem;
-	}
-
-	.row {
-		&:first-of-type {
-			margin-bottom: 4.5rem;
-		}
 	}
 }
 
@@ -96,7 +89,6 @@
 @include whenSmall {
 	.footer {
 		padding-top: 15rem;
-		padding-bottom: 6rem;
 	}
 
 	.row {

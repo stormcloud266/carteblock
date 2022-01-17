@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { motion, useAnimation } from 'framer-motion'
@@ -41,15 +41,20 @@ const Wrapper = ({ delay, children }) => {
 const MotionArrow = ({ delay }) => {
 	const controls = useAnimation()
 	const [ref, inView] = useInView(inViewOptions)
+	const [hasTriggered, setHasTriggered] = useState(false)
 
 	const variants = {
 		hidden: { x: -7 },
-		visible: { x: 0, transition: { duration: 0.5, delay: delay + 0.3 } },
+		visible: {
+			x: 0,
+			transition: { duration: 0.5, delay: !hasTriggered ? delay + 0.3 : 0.3 },
+		},
 	}
 
 	useEffect(() => {
 		if (inView) {
 			controls.start('visible')
+			setHasTriggered(true)
 		}
 		if (!inView) {
 			controls.start('hidden')

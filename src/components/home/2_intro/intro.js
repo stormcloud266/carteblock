@@ -6,14 +6,14 @@ import { useCurrentWidth } from '@hooks'
 import * as styles from './intro.module.scss'
 
 const Intro = () => {
-	const [delay, setDelay] = useState(1)
+	const [delay, setDelay] = useState(1.2)
 	const width = useCurrentWidth()
 
 	useEffect(() => {
 		if (width < 1080) {
 			setDelay(0)
 		} else {
-			setDelay(1)
+			setDelay(1.2)
 		}
 	}, [width])
 
@@ -33,14 +33,13 @@ const Intro = () => {
 				</div>
 
 				<Container textBlock className={styles.textContainer}>
-					<Fade delay={0.3}>
+					<Fade duration={1.6}>
 						<Title size={2}>
-							Carteblock is a management
-							<br />
-							consultancy that solves global blockchain challenges.
+							Carteblock is a management consultancy that solves global
+							blockchain challenges.
 						</Title>
 					</Fade>
-					<Fade delay={0.6}>
+					<Fade delay={0.8}>
 						<p>
 							We help startups & enterprises leverage decentralized solutions &
 							capitalize on blockchain technology to introduce a new level of
