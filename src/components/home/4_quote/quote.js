@@ -12,31 +12,25 @@ const Quote = () => {
 		<Container wrapperSmOnMd isSection className={styles.container}>
 			<Flex noHorizontalMargin collapseOnMd>
 				<div className={styles.imageContainer}>
-					{isLightTheme ? (
-						<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
-							<Parallax offset={30}>
-								<Fade duration={2} y={30}>
+					<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
+						<Parallax offset={30}>
+							<Fade duration={2} y={30}>
+								{isLightTheme ? (
 									<StaticImage
 										src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
 										alt=''
 										placeholder='blurred'
 									/>
-								</Fade>
-							</Parallax>
-						</div>
-					) : (
-						<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
-							<Parallax>
-								<Fade duration={2} y={30}>
+								) : (
 									<StaticImage
 										src='../../../assets/images/PIXEL/CB-CHROME-BG-DARK.png'
 										alt=''
 										placeholder='blurred'
 									/>
-								</Fade>
-							</Parallax>
-						</div>
-					)}
+								)}
+							</Fade>
+						</Parallax>
+					</div>
 				</div>
 				<Container textBlock className={styles.textContainer}>
 					<Fade duration={2} x={20}>

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ThemeContext } from '@context/ThemeContext'
 import { Container, Flex, Title } from '@UI'
 import { Fade } from '@animations'
@@ -54,15 +54,6 @@ const imageAnimation = {
 const Services = () => {
 	const [active, setActive] = useState(0)
 	const { isLightTheme } = useContext(ThemeContext)
-	const controls = useAnimation()
-
-	const handleImageAnimation = (isVisible) => {
-		if (isVisible) {
-			controls.start('animate')
-		} else {
-			controls.start('initial')
-		}
-	}
 
 	return (
 		<Container

@@ -4,11 +4,13 @@ import { useInView } from 'react-intersection-observer'
 import { Fade, Parallax } from '@animations'
 import { Button, Container, Flex, Title } from '@UI'
 import { HeaderOpacityContext } from '@context/HeaderOpacityContext'
+import { ThemeContext } from '@context/ThemeContext'
 import * as styles from './cta.module.scss'
 
 const Cta = () => {
 	const { inView, ref } = useInView({ triggerOnce: false })
 	const { setIsHeaderHidden } = useContext(HeaderOpacityContext)
+	const { isLightTheme } = useContext(ThemeContext)
 
 	useEffect(() => {
 		if (inView) {
@@ -34,16 +36,25 @@ const Cta = () => {
 					</div>
 				</div>
 
-				<Parallax offset={30}>
-					<Fade duration={2} y={30}>
-						<StaticImage
-							src='../../../assets/images/PIXEL/ILLO1FINAL.png'
-							alt=''
-							placeholder='blurred'
-							loading='eager'
-						/>
-					</Fade>
-				</Parallax>
+				<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
+					<Parallax offset={30}>
+						<Fade duration={2} y={30}>
+							{isLightTheme ? (
+								<StaticImage
+									src='../../../assets/images/PIXEL/CB-ILLO-F_A_LIGHT.png'
+									alt=''
+									placeholder='blurred'
+								/>
+							) : (
+								<StaticImage
+									src='../../../assets/images/PIXEL/CB-ILLO-F_A_DARK.png'
+									alt=''
+									placeholder='blurred'
+								/>
+							)}
+						</Fade>
+					</Parallax>
+				</div>
 			</Flex>
 		</Container>
 	)
