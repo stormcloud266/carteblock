@@ -9,6 +9,7 @@ const Fade = ({
 	y = 0,
 	x = 0,
 	triggerOnce = false,
+	inline,
 	children,
 	...rest
 }) => {
@@ -32,7 +33,17 @@ const Fade = ({
 		}
 	}, [controls, inView])
 
-	return (
+	return inline ? (
+		<motion.span
+			ref={ref}
+			variants={variants}
+			initial='hidden'
+			animate={controls}
+			{...rest}
+		>
+			{children}
+		</motion.span>
+	) : (
 		<motion.div
 			ref={ref}
 			variants={variants}

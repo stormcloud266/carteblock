@@ -66,7 +66,7 @@ const Header = ({ toggleTheme, theme }) => {
 	return (
 		<motion.header
 			animate={{ y: isHeaderHidden ? '-100%' : 0 }}
-			transition={{ type: 'tween' }}
+			transition={{ type: 'tween', duration: 0.7 }}
 			className={styles.header}
 		>
 			<Container wrapper className={styles.container}>

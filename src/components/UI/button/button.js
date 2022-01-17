@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { motion, useAnimation } from 'framer-motion'
@@ -13,7 +13,7 @@ const Wrapper = ({ children }) => {
 
 	const variants = {
 		hidden: { opacity: 0 },
-		visible: { opacity: 1, transition: { duration: 0.8 } },
+		visible: { opacity: 1, transition: { duration: 1 } },
 	}
 
 	const inViewOptions = {
@@ -43,8 +43,8 @@ const MotionArrow = () => {
 	const controls = useAnimation()
 
 	const variants = {
-		hidden: { opacity: 0, x: -10 },
-		visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3 } },
+		hidden: { x: -7 },
+		visible: { x: 0, transition: { duration: 0.5, delay: 0.3 } },
 	}
 
 	const inViewOptions = {
@@ -54,9 +54,14 @@ const MotionArrow = () => {
 
 	const [ref, inView] = useInView(inViewOptions)
 
-	if (inView) {
-		controls.start('visible')
-	}
+	useEffect(() => {
+		if (inView) {
+			controls.start('visible')
+		}
+		if (!inView) {
+			controls.start('hidden')
+		}
+	}, [controls, inView])
 
 	return (
 		<motion.span

@@ -14,7 +14,7 @@ const Quote = () => {
 				<div className={styles.imageContainer}>
 					{isLightTheme ? (
 						<div style={{ opacity: isLightTheme !== null ? 1 : 0 }}>
-							<Parallax>
+							<Parallax offset={30}>
 								<Fade duration={2} y={30}>
 									<StaticImage
 										src='../../../assets/images/PIXEL/CB-CHROME-BG-LIGHT.png'
@@ -39,7 +39,7 @@ const Quote = () => {
 					)}
 				</div>
 				<Container textBlock className={styles.textContainer}>
-					<Fade duration={2} x={30}>
+					<Fade duration={2} x={20}>
 						<Title tag='h2' size={3} className={styles.title}>
 							“We develop actionable blockchain strategies, while supporting
 							your team through the necessary steps for growing your operation.”
