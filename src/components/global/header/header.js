@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 import { Container } from '@UI'
+import { Fade } from '@animations'
 import { Logo } from '@images/icons'
 import * as styles from './header.module.scss'
 import { ThemeContext } from '@context/ThemeContext'
@@ -69,40 +70,42 @@ const Header = ({ toggleTheme, theme }) => {
 			transition={{ type: 'tween', duration: 0.7 }}
 			className={styles.header}
 		>
-			<Container wrapper className={styles.container}>
-				<Link to='/' className={styles.logo}>
-					<Logo />
-				</Link>
+			<Fade>
+				<Container wrapper className={styles.container}>
+					<Link to='/' className={styles.logo}>
+						<Logo />
+					</Link>
 
-				<div>
-					<time className={styles.clock}>{time} SNG</time>
-					<motion.button
-						animate={{
-							borderColor: theme === 'light' ? '#ccc' : 'rgba(0,0,0,0)',
-							color: theme === 'light' ? '#ccc' : '#666',
-						}}
-						transition={{ duration: 0.3 }}
-						className={styles.toggle}
-						onClick={() => handleThemeToggle('light')}
-						aria-label='use light theme.'
-					>
-						day
-					</motion.button>
+					<div>
+						<time className={styles.clock}>{time} SNG</time>
+						<motion.button
+							animate={{
+								borderColor: theme === 'light' ? '#ccc' : 'rgba(0,0,0,0)',
+								color: theme === 'light' ? '#ccc' : '#666',
+							}}
+							transition={{ duration: 0.3 }}
+							className={styles.toggle}
+							onClick={() => handleThemeToggle('light')}
+							aria-label='use light theme.'
+						>
+							day
+						</motion.button>
 
-					<motion.button
-						animate={{
-							borderColor: theme === 'dark' ? '#ccc' : 'rgba(0,0,0,0)',
-							color: theme === 'dark' ? '#ccc' : '#666',
-						}}
-						transition={{ duration: 0.3 }}
-						className={styles.toggle}
-						onClick={() => handleThemeToggle('dark')}
-						aria-label='use dark theme.'
-					>
-						night
-					</motion.button>
-				</div>
-			</Container>
+						<motion.button
+							animate={{
+								borderColor: theme === 'dark' ? '#ccc' : 'rgba(0,0,0,0)',
+								color: theme === 'dark' ? '#ccc' : '#666',
+							}}
+							transition={{ duration: 0.3 }}
+							className={styles.toggle}
+							onClick={() => handleThemeToggle('dark')}
+							aria-label='use dark theme.'
+						>
+							night
+						</motion.button>
+					</div>
+				</Container>
+			</Fade>
 		</motion.header>
 	)
 }
