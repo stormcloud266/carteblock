@@ -73,6 +73,12 @@
 	}
 }
 
+:global(body.dark) {
+	.excerpt {
+		color: white;
+	}
+}
+
 @include whenLarge {
 	.container {
 		padding-top: 12rem;

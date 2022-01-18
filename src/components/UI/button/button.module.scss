@@ -41,8 +41,8 @@
 :global(body.dark) {
 	.button {
 		background-color: $color-background-dark;
-		border-color: hsla(0, 0%, 93%, 1);
-		color: hsla(0, 0%, 93%, 1);
+		border-color: white;
+		color: white;
 
 		&:hover {
 			background-color: $color-background-dark;

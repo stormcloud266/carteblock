@@ -73,7 +73,7 @@ const Services = () => {
 											? '#000'
 											: '#eee'
 										: active === index
-										? '#eee'
+										? '#fff'
 										: '#333',
 								}}
 								whileHover={{
@@ -82,7 +82,7 @@ const Services = () => {
 											? '#333'
 											: '#44fe70'
 										: active === index
-										? '#eee'
+										? '#fff'
 										: '#44fe70',
 								}}
 								key={title}

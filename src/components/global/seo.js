@@ -18,14 +18,9 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 		}
 	`)
 
-	// const cardImageUrl = imageUrl
-	// 	? imageUrl
-	// 	: data.site.siteMetadata.siteUrl + data.file.publicURL
-
 	const cardImageUrl = imageUrl
 		? imageUrl
-		: 'https://carteblock-staging.netlify.app' + data.file.publicURL
-	console.log('data.file.publicURL: ', data.file.publicURL)
+		: data.site.siteMetadata.siteUrl + data.file.publicURL
 
 	const siteTitle = title ? title : data.site.siteMetadata.title
 	const siteDescription = description
