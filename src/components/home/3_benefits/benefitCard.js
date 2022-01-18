@@ -14,7 +14,7 @@ const BenefitCard = ({ number, title, description }) => {
 	}
 
 	const inViewOptions = {
-		triggerOnce: false,
+		triggerOnce: true,
 		threshold: 0.05,
 	}
 

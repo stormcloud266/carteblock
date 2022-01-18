@@ -8,7 +8,7 @@ const Fade = ({
 	threshold = 0.2,
 	y = 0,
 	x = 0,
-	triggerOnce = false,
+	triggerOnce = true,
 	inline,
 	children,
 	...rest

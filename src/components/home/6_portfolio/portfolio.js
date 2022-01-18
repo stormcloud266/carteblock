@@ -30,7 +30,7 @@ const Portfolio = () => {
 	const controls = useAnimation()
 
 	const inViewOptions = {
-		triggerOnce: false,
+		triggerOnce: true,
 		threshold: 0.3,
 	}
 
