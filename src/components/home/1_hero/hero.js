@@ -20,7 +20,7 @@ const Hero = () => {
 	return (
 		<Container wrapperSmOnMd isSection className={styles.container}>
 			<Flex noHorizontalMargin collapseOnMd reverseOnMd>
-				<Container textBlock className={styles.textContainer}>
+				<Container textBlock>
 					<Title tag='h1'>
 						<Fade inline delay={0.2} duration={1}>
 							Blockchain Challenges,

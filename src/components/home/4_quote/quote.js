@@ -32,7 +32,7 @@ const Quote = () => {
 						</Parallax>
 					</div>
 				</div>
-				<Container textBlock className={styles.textContainer}>
+				<Container textBlock>
 					<Fade duration={2} x={20}>
 						<Title tag='h2' size={3} className={styles.title}>
 							“We develop actionable blockchain strategies, while supporting
