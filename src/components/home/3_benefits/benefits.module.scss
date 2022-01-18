@@ -17,10 +17,10 @@
 	}
 
 	&:nth-of-type(2) {
-		margin-top: 50rem;
+		margin-top: 100rem;
 	}
 	&:nth-of-type(3) {
-		margin-top: 100rem;
+		margin-top: 200rem;
 	}
 }
 
@@ -39,6 +39,13 @@
 	.sectionContainer {
 		height: 64rem;
 		top: 25rem;
+
+		&:nth-of-type(2) {
+			margin-top: 60rem;
+		}
+		&:nth-of-type(3) {
+			margin-top: 120rem;
+		}
 	}
 
 	.description {

@@ -2,7 +2,7 @@
 @import '@globalStyles/mixins';
 
 .container {
-	padding-top: 36rem;
+	// padding-top: 36rem;
 	padding-bottom: 48rem;
 }
 
@@ -81,7 +81,7 @@
 
 @include whenLarge {
 	.container {
-		padding-top: 24rem;
+		// padding-top: 24rem;
 		padding-bottom: 32rem;
 	}
 
@@ -108,6 +108,7 @@
 
 @include whenMedium {
 	.container {
+		padding-top: 24rem;
 		padding-bottom: 22rem;
 	}
 

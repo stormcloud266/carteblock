@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 const Seo = ({ title, description, url, imageUrl, article }) => {
 	const data = useStaticQuery(graphql`
 		query SeoQuery {
-			file(name: { eq: "meta-card-banner" }) {
+			file(name: { eq: "Carteblock_Website_Card" }) {
 				publicURL
 			}
 			site {
@@ -18,9 +18,14 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 		}
 	`)
 
+	// const cardImageUrl = imageUrl
+	// 	? imageUrl
+	// 	: data.site.siteMetadata.siteUrl + data.file.publicURL
+
 	const cardImageUrl = imageUrl
 		? imageUrl
-		: data.site.siteMetadata.siteUrl + data.file.publicURL
+		: 'https://carteblock-staging.netlify.app' + data.file.publicURL
+	console.log('data.file.publicURL: ', data.file.publicURL)
 
 	const siteTitle = title ? title : data.site.siteMetadata.title
 	const siteDescription = description
