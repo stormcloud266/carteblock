@@ -64,10 +64,10 @@
 	}
 }
 
-a.logo,
-:global(body.dark) a.logo {
+.logo,
+:global(body.dark) .logo {
 	transition: all 0.3s;
-
+	cursor: pointer;
 	&:hover {
 		color: $color-cta;
 	}
