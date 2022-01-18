@@ -34,7 +34,7 @@ const Intro = () => {
 
 				<Container textBlock className={styles.textContainer}>
 					<Fade duration={1.6}>
-						<Title size={2}>
+						<Title size={2} className={styles.title}>
 							Carteblock is a management consultancy that solves global
 							blockchain challenges.
 						</Title>

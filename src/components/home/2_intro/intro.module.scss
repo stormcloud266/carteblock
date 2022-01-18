@@ -17,6 +17,12 @@
 	max-width: 82rem;
 }
 
+@media only screen and (max-width: 1480px) {
+	.title {
+		font-size: $font-size-36;
+	}
+}
+
 @include whenLarge {
 	.container {
 		padding-bottom: 22rem;
@@ -25,6 +31,13 @@
 		margin-left: -6.4rem;
 	}
 }
+
+@media only screen and (max-width: 1280px) {
+	.title {
+		font-size: $font-size-30;
+	}
+}
+
 @include whenMedium {
 	.imageContainer {
 		margin-left: 0;
@@ -32,8 +45,17 @@
 }
 
 @include whenSmall {
+	.title {
+		font-size: $font-size-24;
+	}
 	.container {
 		padding-bottom: 15rem;
 		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.title {
+		font-size: $font-size-20;
 	}
 }
