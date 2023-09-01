@@ -1,18 +1,17 @@
-import React from 'react'
-import { Layout, Seo } from '@global'
-import { Hero, Intro, Benefits, Quote, Services, Portfolio, Cta } from '@home'
+import React from "react";
+import { Layout, Seo } from "@global";
+import { Hero, Intro, Benefits, Quote, Services, Cta } from "@home";
 
 const IndexPage = () => (
-	<Layout>
-		<Seo />
-		<Hero />
-		<Intro />
-		<Benefits />
-		<Quote />
-		<Services />
-		<Portfolio />
-		<Cta />
-	</Layout>
-)
+  <Layout>
+    <Seo />
+    <Hero />
+    <Intro />
+    <Benefits />
+    <Quote />
+    <Services />
+    <Cta />
+  </Layout>
+);
 
-export default IndexPage
+export default IndexPage;
