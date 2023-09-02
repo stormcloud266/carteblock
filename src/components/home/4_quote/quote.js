@@ -36,8 +36,7 @@ const Quote = () => {
           <Fade duration={2} x={20}>
             <Title tag="h2" size={3} className={styles.title}>
               “We develop actionable technology strategies, while supporting
-              your team through the necessary steps for growing your
-              operation.””
+              your team through the necessary steps for growing your operation.”
             </Title>
           </Fade>
           <Fade delay={0.4}>
