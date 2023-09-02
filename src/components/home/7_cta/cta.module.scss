@@ -1,27 +1,27 @@
-@import '@globalStyles/mixins';
+@import "@globalStyles/mixins";
 
 .textContainer {
-	padding-right: 4.8rem;
+  padding-left: 4.8rem;
 }
 
 .imageContainer {
-	max-width: 66rem;
+  max-width: 66rem;
 }
 
 .title {
-	max-width: 100rem;
-	margin-bottom: 6rem;
-	line-height: 1.33;
+  max-width: 100rem;
+  margin-bottom: 6rem;
+  line-height: 1.33;
 }
 
 @include whenLarge {
-	.textContainer {
-		padding-right: 0rem;
-	}
+  .textContainer {
+    padding-left: 0rem;
+  }
 }
 @include whenMedium {
-	.textContainer {
-		padding-right: 0;
-		margin-top: 6rem;
-	}
+  .textContainer {
+    padding-left: 0;
+    margin-top: 6rem;
+  }
 }

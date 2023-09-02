@@ -22,20 +22,7 @@ const Cta = () => {
 
   return (
     <Container wrapperSmOnMd isSection>
-      <Flex collapseOnMd reverseOnMd>
-        <div className={styles.textContainer}>
-          <Fade>
-            <Title size={2} className={styles.title}>
-              It is Carteblock’s mission to prepare businesses for the future
-              and uncover value in every step of the way forward.
-            </Title>
-          </Fade>
-
-          <div ref={ref}>
-            <Button href="mailto:info@carteblock.com">Get In Touch</Button>
-          </div>
-        </div>
-
+      <Flex collapseOnMd>
         <div
           style={{ opacity: isLightTheme !== null ? 1 : 0 }}
           className={styles.imageContainer}
@@ -57,6 +44,19 @@ const Cta = () => {
               )}
             </Fade>
           </Parallax>
+        </div>
+
+        <div className={styles.textContainer}>
+          <Fade>
+            <Title size={2} className={styles.title}>
+              It is Carteblock’s mission to prepare businesses for the future
+              and uncover value in every step of the way forward...
+            </Title>
+          </Fade>
+
+          <div ref={ref}>
+            <Button href="mailto:info@carteblock.com">Get In Touch</Button>
+          </div>
         </div>
       </Flex>
     </Container>
