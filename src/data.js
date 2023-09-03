@@ -37,7 +37,7 @@ export const benefits = [
   {
     title: "Advisory",
     description:
-      "With the insights gained from our years of working in the technical space, we can help you tackle your challenges with sound and feasible solutions that bring measurable efficiency",
+      "With the insights gained from our years of working in the technical space, we can help you tackle your challenges with sound and feasible solutions that bring measurable efficiency.",
   },
   {
     title: "Operations",
