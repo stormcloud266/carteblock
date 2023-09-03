@@ -1,56 +1,56 @@
-@import './variables';
-@import './mixins';
+@import "./variables";
+@import "./mixins";
 
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	color: $color-text;
-	background-color: $color-background;
-	box-sizing: border-box;
-	position: relative;
-	font-size: $font-size-24;
-	font-family: $font-family;
-	font-weight: 400;
-	line-height: 1.55;
-	font-feature-settings: 'ss02' 1;
-	cursor: crosshair;
+  color: $color-text;
+  background-color: $color-background;
+  box-sizing: border-box;
+  position: relative;
+  font-size: $font-size-18;
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.65;
+  font-feature-settings: "ss02" 1;
+  cursor: crosshair;
 }
 
 ::selection {
-	background: $color-cta;
+  background: $color-cta;
 }
 
 body.dark {
-	color: $color-text-accent;
-	background-color: $color-background-dark;
+  color: $color-text-accent;
+  background-color: $color-background-dark;
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: white;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white;
+  }
 
-	button h2 {
-		color: inherit;
-	}
+  button h2 {
+    color: inherit;
+  }
 }
 
 main:focus {
-	border: none;
-	outline: none;
+  border: none;
+  outline: none;
 }
 
 h1,
@@ -59,47 +59,47 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-family-title;
-	line-height: 1.2;
-	color: $color-text-primary;
+  font-family: $font-family-title;
+  line-height: 1.2;
+  color: $color-text-primary;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 img {
-	width: 100%;
-	max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
-	transition: color 0.2s;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
 }
 
 button,
 input,
 textarea {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 button {
-	border: none;
-	outline: none;
-	cursor: pointer;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-@include whenLarge {
-	body {
-		font-size: $font-size-20;
-	}
-}
-@include whenMedium {
-	body {
-		font-size: $font-size-18;
-	}
-}
+// @include whenLarge {
+//   body {
+//     font-size: $font-size-20;
+//   }
+// }
+// @include whenMedium {
+//   body {
+//     font-size: $font-size-18;
+//   }
+// }

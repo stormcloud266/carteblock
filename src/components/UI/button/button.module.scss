@@ -1,77 +1,76 @@
-@import '@globalStyles/variables';
-@import '@globalStyles/mixins';
+@import "@globalStyles/variables";
+@import "@globalStyles/mixins";
 
 .button {
-	padding: 1.2rem 3rem;
-	color: #000;
-	font-size: $font-size-30;
-	font-weight: 500;
-	font-family: $font-family-title;
-	background-color: $color-background;
-	border: 3px solid black;
-	outline: none;
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-between;
-	transition: all 0.2s;
-	box-shadow: 0px 0px hsla(0, 0%, 20%, 0.1);
-	min-width: 30rem;
+  padding: 1.2rem 3rem;
+  color: #000;
+  font-size: $font-size-24;
+  font-weight: 500;
+  font-family: $font-family-title;
+  background-color: $color-background;
+  border: 3px solid black;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+  box-shadow: 0px 0px hsla(0, 0%, 20%, 0.1);
+  min-width: 30rem;
 
-	svg {
-		margin-left: 3.5rem;
-		width: 2.8rem;
-		transition: transform 0.2s;
-	}
+  svg {
+    margin-left: 3.5rem;
+    width: 2.8rem;
+    transition: transform 0.2s;
+  }
 
-	&:hover {
-		background-color: $color-background;
-		border-color: $color-cta;
-		color: $color-cta;
-		svg {
-			transform: translateX(5px);
-		}
-	}
+  &:hover {
+    background-color: $color-background;
+    border-color: $color-cta;
+    color: $color-cta;
+    svg {
+      transform: translateX(5px);
+    }
+  }
 
-	span {
-		display: block;
-		margin-bottom: -4px;
-	}
+  span {
+    display: block;
+    margin-bottom: -4px;
+  }
 }
 
 :global(body.dark) {
-	.button {
-		background-color: $color-background-dark;
-		border-color: white;
-		color: white;
+  .button {
+    background-color: $color-background-dark;
+    border-color: white;
+    color: white;
 
-		&:hover {
-			background-color: $color-background-dark;
-			border-color: $color-cta;
-			color: $color-cta;
-		}
-	}
+    &:hover {
+      background-color: $color-background-dark;
+      border-color: $color-cta;
+      color: $color-cta;
+    }
+  }
 }
 
 @include whenLarge {
-	.button {
-		font-size: $font-size-24;
-		min-width: 26rem;
-	}
+  .button {
+    font-size: $font-size-24;
+    min-width: 26rem;
+  }
 }
 
 @include whenMedium {
-	.button {
-		font-size: $font-size-20;
-		min-width: unset;
-		svg {
-			margin-left: 1.8rem;
-			width: 1.8rem;
-		}
-	}
+  .button {
+    min-width: unset;
+    svg {
+      margin-left: 1.8rem;
+      width: 1.8rem;
+    }
+  }
 }
 
 @include whenSmall {
-	.button {
-		font-size: $font-size-18;
-	}
+  .button {
+    font-size: $font-size-18;
+  }
 }

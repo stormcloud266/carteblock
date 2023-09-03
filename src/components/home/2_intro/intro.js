@@ -36,7 +36,7 @@ const Intro = () => {
           <Fade duration={1.6}>
             <Title size={2} className={styles.title}>
               Carteblock is a management consultancy that solves global
-              technology challenges
+              technology challenges.
             </Title>
           </Fade>
           <Fade delay={0.8}>
